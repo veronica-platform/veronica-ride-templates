@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RIDE_notaDebito" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23078fe1-b005-44ae-8dc0-7a1396cac66c">
+	<property name="ireport.zoom" value="1.6500000000000097"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="284"/>
+	<style name="etiqueta-texto" hTextAlign="Left" hImageAlign="Left" vTextAlign="Middle" vImageAlign="Middle" isBlankWhenNull="true">
+		<paragraph leftIndent="2"/>
+	</style>
+	<style name="etiqueta-celda" hTextAlign="Left" hImageAlign="Left" vTextAlign="Middle" vImageAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<paragraph leftIndent="2"/>
+	</style>
+	<subDataset name="dataset1" uuid="933f5b64-3caf-4cb5-807d-1c380a8c0890">
+		<field name="razon" class="java.lang.String">
+			<fieldDescription><![CDATA[razon]]></fieldDescription>
+		</field>
+		<field name="valor" class="java.lang.String">
+			<fieldDescription><![CDATA[valor]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="dataset3" uuid="e61ca1b1-f6bb-4b08-9920-d5465c9c21ad">
+		<parameter name="hmapFormasPago" class="java.util.HashMap"/>
+		<field name="formaPago" class="java.lang.String">
+			<fieldDescription><![CDATA[formaPago]]></fieldDescription>
+		</field>
+		<field name="total" class="java.lang.String">
+			<fieldDescription><![CDATA[total]]></fieldDescription>
+		</field>
+		<field name="plazo" class="java.lang.String">
+			<fieldDescription><![CDATA[plazo]]></fieldDescription>
+		</field>
+		<field name="unidadTiempo" class="java.lang.String">
+			<fieldDescription><![CDATA[unidadTiempo]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="dataset2" uuid="deb96def-a3fd-4c48-bd80-941d815b51e2">
+		<queryString language="xPath">
+			<![CDATA[/notaDebito/infoAdicional/campoAdicional]]>
+		</queryString>
+		<field name="campoAdicional" class="java.lang.String">
+			<fieldDescription><![CDATA[child::text()]]></fieldDescription>
+		</field>
+		<field name="nombre" class="java.lang.String">
+			<fieldDescription><![CDATA[@nombre]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="numeroAutorizacion" class="java.lang.String"/>
+	<parameter name="fechaAutorizacion" class="java.lang.String"/>
+	<parameter name="hmapFormasPago" class="java.util.HashMap"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="hmapTiposDocumentos" class="java.util.HashMap"/>
+	<queryString language="xPath">
+		<![CDATA[/notaDebito]]>
+	</queryString>
+	<field name="ambiente" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoTributaria/ambiente]]></fieldDescription>
+	</field>
+	<field name="tipoEmision" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoTributaria/tipoEmision]]></fieldDescription>
+	</field>
+	<field name="razonSocial" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoTributaria/razonSocial]]></fieldDescription>
+	</field>
+	<field name="nombreComercial" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoTributaria/nombreComercial]]></fieldDescription>
+	</field>
+	<field name="ruc" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoTributaria/ruc]]></fieldDescription>
+	</field>
+	<field name="claveAcceso" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoTributaria/claveAcceso]]></fieldDescription>
+	</field>
+	<field name="codDoc" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoTributaria/codDoc]]></fieldDescription>
+	</field>
+	<field name="estab" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoTributaria/estab]]></fieldDescription>
+	</field>
+	<field name="ptoEmi" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoTributaria/ptoEmi]]></fieldDescription>
+	</field>
+	<field name="secuencial" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoTributaria/secuencial]]></fieldDescription>
+	</field>
+	<field name="dirMatriz" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoTributaria/dirMatriz]]></fieldDescription>
+	</field>
+	<field name="fechaEmision" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/fechaEmision]]></fieldDescription>
+	</field>
+	<field name="tipoIdentificacionComprador" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/tipoIdentificacionComprador]]></fieldDescription>
+	</field>
+	<field name="razonSocialComprador" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/razonSocialComprador]]></fieldDescription>
+	</field>
+	<field name="identificacionComprador" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/identificacionComprador]]></fieldDescription>
+	</field>
+	<field name="contribuyenteEspecial" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/contribuyenteEspecial]]></fieldDescription>
+	</field>
+	<field name="obligadoContabilidad" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/obligadoContabilidad]]></fieldDescription>
+	</field>
+	<field name="codDocModificado" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/codDocModificado]]></fieldDescription>
+	</field>
+	<field name="numDocModificado" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/numDocModificado]]></fieldDescription>
+	</field>
+	<field name="fechaEmisionDocSustento" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/fechaEmisionDocSustento]]></fieldDescription>
+	</field>
+	<field name="totalSinImpuestos" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/totalSinImpuestos]]></fieldDescription>
+	</field>
+	<field name="valorTotal" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/valorTotal]]></fieldDescription>
+	</field>
+	<field name="razon" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/motivos/motivo/razon]]></fieldDescription>
+	</field>
+	<field name="valor" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/motivos/motivo/valor]]></fieldDescription>
+	</field>
+	<field name="subtotal12" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/impuestos/impuesto[codigo='2' and codigoPorcentaje='2']/baseImponible]]></fieldDescription>
+	</field>
+	<field name="subtotal0" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/impuestos/impuesto[codigo='2' and codigoPorcentaje='0']/baseImponible]]></fieldDescription>
+	</field>
+	<field name="subtotalNoObjeto" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/impuestos/impuesto[codigo='2' and codigoPorcentaje='6']/baseImponible]]></fieldDescription>
+	</field>
+	<field name="subtotalExcento" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/impuestos/impuesto[codigo='2' and codigoPorcentaje='7']/baseImponible]]></fieldDescription>
+	</field>
+	<field name="ice" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/impuestos/impuesto[codigo='3' and codigoPorcentaje='7']/valor]]></fieldDescription>
+	</field>
+	<field name="iva12" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/impuestos/impuesto[codigo='2' and codigoPorcentaje='2']/valor]]></fieldDescription>
+	</field>
+	<field name="irbpnr" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/impuestos/impuesto[codigo='5']/valor]]></fieldDescription>
+	</field>
+	<field name="dirEstablecimiento" class="java.lang.String">
+		<fieldDescription><![CDATA[/notaDebito/infoNotaDebito/dirEstablecimiento]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="289" splitType="Immediate">
+			<rectangle radius="10">
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="280" y="0" width="275" height="202" uuid="7e45e0f0-acdb-4404-835f-4545ea18bad4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#013870"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement style="etiqueta-celda" mode="Opaque" x="278" y="274" width="277" height="15" forecolor="#333333" uuid="4d85d81a-c674-4389-914e-a096177ca9a9"/>
+				<box>
+					<pen lineColor="#013870"/>
+					<topPen lineColor="#013870"/>
+					<leftPen lineColor="#013870"/>
+					<bottomPen lineColor="#013870"/>
+					<rightPen lineColor="#013870"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor de la Modificación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-celda" mode="Opaque" x="0" y="274" width="278" height="15" forecolor="#333333" uuid="a0e1fbde-b262-4106-bd4a-83daf2b9e8f4"/>
+				<box>
+					<pen lineColor="#013870"/>
+					<topPen lineColor="#013870"/>
+					<leftPen lineColor="#013870"/>
+					<bottomPen lineColor="#013870"/>
+					<rightPen lineColor="#013870"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Razón de la Modificación]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="212" width="555" height="53" uuid="b8e9113f-d322-4963-9f25-6392ffe2f9c8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#013870"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="0" y="212" width="170" height="15" uuid="bcafad9a-2f6b-41ea-8b3a-fbdff693048d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Razón Social/Nombres y Apellidos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="402" y="212" width="78" height="15" uuid="9dcab817-94c6-428e-bb6b-0c01732891d7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Identificación:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="0" y="227" width="97" height="15" uuid="e907de33-1bbb-4d9b-8ee0-ddd54ae1328e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Fecha de Emisión:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="0" y="250" width="150" height="15" uuid="f39df52e-23d3-48cc-a25e-099dcb565ecc"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Comprobante que se modifica:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="etiqueta-texto" x="170" y="212" width="232" height="15" uuid="281876c8-1030-4975-a611-b59d806faea2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{razonSocialComprador}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="etiqueta-texto" x="480" y="212" width="71" height="15" uuid="9a340b53-ce30-471a-bfba-48de57edd700"/>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identificacionComprador}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="etiqueta-texto" x="97" y="227" width="454" height="15" uuid="11d8734f-aa38-49bb-b5ca-f08ed0631654"/>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaEmisionDocSustento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="etiqueta-texto" x="150" y="250" width="401" height="15" uuid="02e856ed-a9e2-45b1-991b-920a5cc4ad62"/>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{hmapTiposDocumentos}.get($F{codDocModificado}).toString().concat("   ").concat($F{numDocModificado})]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="21" y="246" width="512" height="1" uuid="63f45e26-f631-4ee4-9019-06616bca1b69"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#013870"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="etiqueta-texto" positionType="FixRelativeToBottom" x="283" y="184" width="268" height="15" uuid="47d88301-870e-4c37-8d7d-13744fe3a34b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{claveAcceso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="etiqueta-texto" x="342" y="124" width="209" height="15" uuid="57b9a4a3-69da-4eff-afa4-619cb618d82a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1".equals($F{tipoEmision}) ? "NORMAL" : "INDISPONIBILIDAD DEL SISTEMA"]]></textFieldExpression>
+			</textField>
+			<rectangle radius="10">
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="117" width="275" height="85" uuid="75b53c4d-18dd-451d-9d1e-a4879830e0dc"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#013870"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement style="etiqueta-texto" x="322" y="4" width="229" height="15" uuid="6ba97454-4386-4069-9e5a-7a8809e7852b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ruc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="283" y="139" width="268" height="15" uuid="939cd25e-886d-4e0f-b4f0-8968c84429d0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph rightIndent="2"/>
+				</textElement>
+				<text><![CDATA[CLAVE DE ACCESO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="283" y="19" width="268" height="30" uuid="b7709334-d47f-49fb-8196-df33044c3523"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[NOTA DE DÉBITO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="342" y="109" width="209" height="15" uuid="64090780-530c-4478-9752-cb60a32156ac"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1".equals($F{ambiente}) ? "PRUEBAS":"PRODUCCIÓN"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="283" y="109" width="59" height="15" uuid="7967e343-f37b-4d8e-9f49-a86e1729527b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[AMBIENTE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="283" y="94" width="160" height="15" uuid="6e4cdd84-e6f1-4217-bd89-c83c08045670">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[FECHA Y HORA DE AUTORIZACIÓN:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="etiqueta-texto" positionType="Float" x="185" y="184" width="89" height="15" uuid="2316c8e8-8fb5-4f73-bffe-aa2910e50058"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{obligadoContabilidad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="283" y="124" width="59" height="15" uuid="b68c9bbe-65ec-4ae0-acfe-e70f7fece84b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[EMISIÓN:]]></text>
+			</staticText>
+			<image hAlign="Center">
+				<reportElement x="0" y="0" width="274" height="109" uuid="3cf72752-074d-4ba4-900a-d3aef6a1ccf3"/>
+				<imageExpression><![CDATA[new java.io.ByteArrayInputStream(org.apache.commons.codec.binary.Base64.decodeBase64($P{logo}.getBytes()))]]></imageExpression>
+			</image>
+			<componentElement>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="283" y="154" width="268" height="30" forecolor="#013870" backcolor="#FFFFFF" uuid="6c7f9331-9080-4ae8-9b6b-35954c3ec055"/>
+				<jr:Code128 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" moduleWidth="1.0" textPosition="none">
+					<jr:codeExpression><![CDATA[$F{claveAcceso}]]></jr:codeExpression>
+				</jr:Code128>
+			</componentElement>
+			<staticText>
+				<reportElement style="etiqueta-texto" positionType="Float" x="0" y="184" width="185" height="15" uuid="900fb0ed-3628-4f92-914e-94f0a53368a4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[OBLIGADO A LLEVAR CONTABILIDAD:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="etiqueta-texto" positionType="Float" x="63" y="154" width="211" height="15" uuid="93649a02-6728-4d24-a0be-b1ddc6c6493e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dirEstablecimiento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="etiqueta-texto" positionType="Float" x="185" y="169" width="89" height="15" uuid="fde26085-d291-4a1e-a0f1-4696bf3dfd55"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{contribuyenteEspecial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="etiqueta-texto" x="283" y="79" width="268" height="15" uuid="9b8faa63-6992-4bfb-8403-04241534162d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numeroAutorizacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="etiqueta-texto" x="305" y="49" width="246" height="15" uuid="61c6f03d-fbd9-4e02-835a-855beb3c1ac4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estab} + "-" + $F{ptoEmi}+"-"+$F{secuencial}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="283" y="64" width="268" height="15" uuid="ad968ad3-88ca-4665-8f27-98a83cef280b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[NÚMERO DE AUTORIZACIÓN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-texto" positionType="Float" x="0" y="154" width="63" height="15" uuid="f69470d5-a10c-49a2-a36d-6109a25911ab"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Dir Sucursal:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="etiqueta-texto" x="443" y="94" width="108" height="15" uuid="251e941c-9e9e-4a0c-847d-248a13a813b3">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="7.5"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fechaAutorizacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="283" y="49" width="22" height="15" uuid="32ac565c-93f7-4c50-961b-1074e0d71d37"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[No.:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="etiqueta-texto" positionType="Float" x="63" y="139" width="212" height="15" uuid="7c550036-6331-45ec-a79d-800324dd75b5"/>
+				<textElement verticalAlignment="Top">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dirMatriz}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="etiqueta-texto" x="0" y="124" width="274" height="15" forecolor="#013870" uuid="a58dc051-f773-41a9-ab11-6dcfcc0eaf35"/>
+				<textElement verticalAlignment="Top">
+					<font size="10" isBold="true"/>
+					<paragraph leftIndent="4" rightIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{razonSocial}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="etiqueta-texto" positionType="Float" x="0" y="139" width="63" height="15" uuid="68420cf2-5a50-45c7-a77b-29133b565fdd"/>
+				<textElement verticalAlignment="Top">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Dir Matriz:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-texto" positionType="Float" x="0" y="169" width="185" height="15" uuid="2346bf1b-1b5e-469c-9227-b070ac42d68a"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Contribuyente Especial Nro:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="283" y="4" width="39" height="15" uuid="30eb8f99-068d-4c11-94e5-dcefab193f9d"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[R.U.C.:]]></text>
+			</staticText>
+		</band>
+		<band height="26" splitType="Immediate">
+			<componentElement>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="555" height="15" uuid="6e8702e3-c4c9-4d7a-a8c5-6ce0f58ab498"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical" ignoreWidth="true">
+					<datasetRun subDataset="dataset1" uuid="65a9e32e-ffa6-4729-aaa2-40c8a2bb7719">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/notaDebito/motivos/motivo")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="15" width="555">
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="278" height="15" uuid="e2e25909-2a52-4feb-9e83-b7a1bece714f"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{razon}.trim()]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="278" y="0" width="277" height="15" uuid="be676765-cba0-4d7a-b19b-3659c8b97587"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{valor}.trim()]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="135" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="135" isRemoveLineWhenBlank="true" uuid="87f78d47-038b-43c5-8b81-cc461f087fcb"/>
+				<frame>
+					<reportElement mode="Opaque" x="312" y="0" width="243" height="135" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="3fc0ec38-dee3-46de-b578-c86125286326"/>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="0" width="143" height="15" uuid="fe1c588f-f56c-4727-9437-b03ee8a98588"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement>
+							<font isBold="true"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[SUBTOTAL 12%]]></text>
+					</staticText>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="15" width="143" height="15" uuid="76bd6019-4621-47cb-970a-28ff7118c1ad"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement>
+							<font isBold="true"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[SUBTOTAL 0%]]></text>
+					</staticText>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="45" width="143" height="15" uuid="f56cb93a-c823-47c1-9bb4-eb0b8d00730e"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement>
+							<font isBold="true"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[SUBTOTAL EXCENTO DE IVA]]></text>
+					</staticText>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="90" width="143" height="15" uuid="6d7f39c3-108e-478d-87ae-17d2310b4d85"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement>
+							<font isBold="true"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[IVA 12%]]></text>
+					</staticText>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="30" width="143" height="15" uuid="46a32b71-ea7d-4868-bb86-1225e2d929fa"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement>
+							<font isBold="true"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[SUBTOTAL NO OBJETO DE IVA]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="143" y="30" width="100" height="15" uuid="e755fc6c-95f7-4df4-8e21-5861ca24ff63"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{subtotalNoObjeto}==null?0:$F{subtotalNoObjeto}]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="143" y="60" width="100" height="15" uuid="47dcea5a-ef99-4a00-b930-a608abaddd6d"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{totalSinImpuestos}==null?0:$F{totalSinImpuestos}]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="143" y="90" width="100" height="15" uuid="3efeaf5b-ae71-4bef-a0fb-5317050e311f"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{iva12}==null?0:$F{iva12}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="105" width="143" height="15" uuid="a6c5ddfd-d9e0-4a61-8046-07d8c3429299"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement>
+							<font isBold="true"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[IRBPNR]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="143" y="0" width="100" height="15" uuid="bf85b0ea-e366-437c-8fa4-19ba280fa5ef"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{subtotal12}==null?0:$F{subtotal12}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="60" width="143" height="15" uuid="d1c0bd94-0a34-4d0d-922d-a7e59fdd91e4"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement>
+							<font isBold="true"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[SUBTOTAL SIN IMPUESTOS]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="143" y="15" width="100" height="15" uuid="aa374c01-bcb4-40c6-8ab2-18ce55dc5f64"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{subtotal0}==null?0:$F{subtotal0}]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="143" y="45" width="100" height="15" uuid="f4763e1e-7cce-43a5-8590-c07d741f4128"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{subtotalExcento}==null?0:$F{subtotalExcento}]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="143" y="105" width="100" height="15" uuid="3e29b535-2664-4326-977d-54a2beceef01"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{irbpnr}==null?0:$F{irbpnr}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="75" width="143" height="15" uuid="3d9cd7d5-319d-4de5-a086-a9502b7b729e"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement>
+							<font isBold="true"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[ICE]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="143" y="120" width="100" height="15" uuid="e85d4f3c-58f1-4768-bf1d-e604f3452896"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{valorTotal}==null?0:$F{valorTotal}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="120" width="143" height="15" uuid="8983183f-9ad6-4b94-8bde-f2d8d4721abb"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement>
+							<font isBold="true"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[VALOR TOTAL]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="143" y="75" width="100" height="15" uuid="0eef8344-2c31-4bcf-9de8-b54fb9cc6732"/>
+						<box>
+							<pen lineColor="#013870"/>
+							<topPen lineColor="#013870"/>
+							<leftPen lineColor="#013870"/>
+							<bottomPen lineColor="#013870"/>
+							<rightPen lineColor="#013870"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{ice}==null?0:$F{ice}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<componentElement>
+					<reportElement positionType="Float" mode="Opaque" x="0" y="15" width="278" height="15" uuid="50efa4bb-27fe-4874-841f-c6da306dd39f"/>
+					<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+						<datasetRun subDataset="dataset2" uuid="52276907-3507-4016-9577-f04bb999492e">
+							<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/notaDebito/infoAdicional/campoAdicional")]]></dataSourceExpression>
+						</datasetRun>
+						<jr:listContents height="15" width="278">
+							<textField textAdjust="StretchHeight">
+								<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="140" height="15" uuid="173bb383-f329-4ce3-a4ef-df19163cff23"/>
+								<box>
+									<pen lineColor="#013870"/>
+									<topPen lineColor="#013870"/>
+									<leftPen lineColor="#013870"/>
+									<bottomPen lineColor="#013870"/>
+									<rightPen lineColor="#013870"/>
+								</box>
+								<textElement>
+									<paragraph leftIndent="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+							</textField>
+							<textField textAdjust="StretchHeight">
+								<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="140" y="0" width="138" height="15" uuid="8b430085-95b7-42ec-be5c-45a948c9223a"/>
+								<box>
+									<pen lineColor="#013870"/>
+									<topPen lineColor="#013870"/>
+									<leftPen lineColor="#013870"/>
+									<bottomPen lineColor="#013870"/>
+									<rightPen lineColor="#013870"/>
+								</box>
+								<textElement>
+									<paragraph leftIndent="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{campoAdicional}]]></textFieldExpression>
+							</textField>
+						</jr:listContents>
+					</jr:list>
+				</componentElement>
+				<staticText>
+					<reportElement style="etiqueta-celda" mode="Opaque" x="0" y="0" width="278" height="15" forecolor="#000000" uuid="724b2175-3044-4e95-b718-0859fc1289ca"/>
+					<box>
+						<pen lineColor="#013870"/>
+						<topPen lineColor="#013870"/>
+						<leftPen lineColor="#013870"/>
+						<bottomPen lineColor="#013870"/>
+						<rightPen lineColor="#013870"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Información Adicional]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

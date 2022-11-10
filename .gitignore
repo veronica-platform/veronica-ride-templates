@@ -1,0 +1,7 @@
+# Intellij
+*.ipr
+*.iml
+.idea
+out/
+.DS_Store
+#IReport

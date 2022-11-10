@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RIDE_guiaRemision" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23078fe1-b005-44ae-8dc0-7a1396cac66c">
+	<property name="ireport.zoom" value="1.401975597925575"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="251"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter2.xml"/>
+	<style name="etiqueta-texto" hTextAlign="Left" hImageAlign="Left" vTextAlign="Middle" vImageAlign="Middle" isBlankWhenNull="true">
+		<paragraph leftIndent="2"/>
+	</style>
+	<style name="etiqueta-celda" hTextAlign="Left" hImageAlign="Left" vTextAlign="Middle" vImageAlign="Middle" isBlankWhenNull="true" fontSize="8" isBold="false">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<paragraph leftIndent="2"/>
+	</style>
+	<style name="border" mode="Opaque">
+		<box>
+			<pen lineWidth="0.5" lineColor="#013870"/>
+			<topPen lineWidth="0.5" lineColor="#013870"/>
+			<leftPen lineWidth="0.5" lineColor="#013870"/>
+			<bottomPen lineWidth="0.5" lineColor="#013870"/>
+			<rightPen lineWidth="0.5" lineColor="#013870"/>
+		</box>
+	</style>
+	<subDataset name="destinatariosDS" uuid="cd25d000-37b6-4180-9343-6a0411c40202">
+		<parameter name="SUBREPORT_DIR" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{SUBREPORT_DIR}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="hmapTiposDocumentos" class="java.util.HashMap"/>
+		<queryString language="xPath">
+			<![CDATA[/guiaRemision/destinatarios/destinatario]]>
+		</queryString>
+		<field name="codDocSustento" class="java.lang.String">
+			<fieldDescription><![CDATA[codDocSustento]]></fieldDescription>
+		</field>
+		<field name="fechaEmisionDocSustento" class="java.lang.String">
+			<fieldDescription><![CDATA[fechaEmisionDocSustento]]></fieldDescription>
+		</field>
+		<field name="numAutDocSustento" class="java.lang.String">
+			<fieldDescription><![CDATA[numAutDocSustento]]></fieldDescription>
+		</field>
+		<field name="motivoTraslado" class="java.lang.String">
+			<fieldDescription><![CDATA[motivoTraslado]]></fieldDescription>
+		</field>
+		<field name="dirDestinatario" class="java.lang.String">
+			<fieldDescription><![CDATA[dirDestinatario]]></fieldDescription>
+		</field>
+		<field name="identificacionDestinatario" class="java.lang.String">
+			<fieldDescription><![CDATA[identificacionDestinatario]]></fieldDescription>
+		</field>
+		<field name="razonSocialDestinatario" class="java.lang.String">
+			<fieldDescription><![CDATA[razonSocialDestinatario]]></fieldDescription>
+		</field>
+		<field name="docAduaneroUnico" class="java.lang.String">
+			<fieldDescription><![CDATA[docAduaneroUnico]]></fieldDescription>
+		</field>
+		<field name="codEstabDestino" class="java.lang.String">
+			<fieldDescription><![CDATA[codEstabDestino]]></fieldDescription>
+		</field>
+		<field name="ruta" class="java.lang.String">
+			<fieldDescription><![CDATA[ruta]]></fieldDescription>
+		</field>
+		<field name="numDocSustento" class="java.lang.String">
+			<fieldDescription><![CDATA[numDocSustento]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="dataset1" uuid="195a2d35-5c21-4fa3-9b7f-c6218890b8c0">
+		<field name="campoAdicional" class="java.lang.String">
+			<fieldDescription><![CDATA[child::text()]]></fieldDescription>
+		</field>
+		<field name="nombre" class="java.lang.String">
+			<fieldDescription><![CDATA[@nombre]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="destinatarioItemsDS" uuid="8f22a48c-e5e8-4143-b10a-58eeecf49ece">
+		<field name="cantidad" class="java.lang.String">
+			<fieldDescription><![CDATA[cantidad]]></fieldDescription>
+		</field>
+		<field name="descripcion" class="java.lang.String">
+			<fieldDescription><![CDATA[descripcion]]></fieldDescription>
+		</field>
+		<field name="codigoInterno" class="java.lang.String">
+			<fieldDescription><![CDATA[codigoInterno]]></fieldDescription>
+		</field>
+		<field name="codigoAdicional" class="java.lang.String">
+			<fieldDescription><![CDATA[codigoAdicional]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="dataset2" uuid="a6ea5094-c8df-442f-9f91-2c415c0f6c50">
+		<field name="campoAdicional" class="java.lang.String">
+			<fieldDescription><![CDATA[child::text()]]></fieldDescription>
+		</field>
+		<field name="nombre" class="java.lang.String">
+			<fieldDescription><![CDATA[@nombre]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="numeroAutorizacion" class="java.lang.String"/>
+	<parameter name="fechaAutorizacion" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="hmapTiposDocumentos" class="java.util.HashMap"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<queryString language="xPath">
+		<![CDATA[/guiaRemision]]>
+	</queryString>
+	<field name="ambiente" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoTributaria/ambiente]]></fieldDescription>
+	</field>
+	<field name="tipoEmision" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoTributaria/tipoEmision]]></fieldDescription>
+	</field>
+	<field name="razonSocial" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoTributaria/razonSocial]]></fieldDescription>
+	</field>
+	<field name="nombreComercial" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoTributaria/nombreComercial]]></fieldDescription>
+	</field>
+	<field name="ruc" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoTributaria/ruc]]></fieldDescription>
+	</field>
+	<field name="claveAcceso" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoTributaria/claveAcceso]]></fieldDescription>
+	</field>
+	<field name="codDoc" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoTributaria/codDoc]]></fieldDescription>
+	</field>
+	<field name="estab" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoTributaria/estab]]></fieldDescription>
+	</field>
+	<field name="ptoEmi" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoTributaria/ptoEmi]]></fieldDescription>
+	</field>
+	<field name="secuencial" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoTributaria/secuencial]]></fieldDescription>
+	</field>
+	<field name="dirMatriz" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoTributaria/dirMatriz]]></fieldDescription>
+	</field>
+	<field name="dirPartida" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoGuiaRemision/dirPartida]]></fieldDescription>
+	</field>
+	<field name="razonSocialTransportista" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoGuiaRemision/razonSocialTransportista]]></fieldDescription>
+	</field>
+	<field name="tipoIdentificacionTransportista" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoGuiaRemision/tipoIdentificacionTransportista]]></fieldDescription>
+	</field>
+	<field name="rucTransportista" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoGuiaRemision/rucTransportista]]></fieldDescription>
+	</field>
+	<field name="obligadoContabilidad" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoGuiaRemision/obligadoContabilidad]]></fieldDescription>
+	</field>
+	<field name="contribuyenteEspecial" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoGuiaRemision/contribuyenteEspecial]]></fieldDescription>
+	</field>
+	<field name="fechaIniTransporte" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoGuiaRemision/fechaIniTransporte]]></fieldDescription>
+	</field>
+	<field name="fechaFinTransporte" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoGuiaRemision/fechaFinTransporte]]></fieldDescription>
+	</field>
+	<field name="placa" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoGuiaRemision/placa]]></fieldDescription>
+	</field>
+	<field name="dirEstablecimiento" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/infoGuiaRemision/dirEstablecimiento]]></fieldDescription>
+	</field>
+	<field name="identificacionDestinatario" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/destinatarios/destinatario/identificacionDestinatario]]></fieldDescription>
+	</field>
+	<field name="razonSocialDestinatario" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/destinatarios/destinatario/razonSocialDestinatario]]></fieldDescription>
+	</field>
+	<field name="dirDestinatario" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/destinatarios/destinatario/dirDestinatario]]></fieldDescription>
+	</field>
+	<field name="docAduaneroUnico" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/destinatarios/destinatario/docAduaneroUnico]]></fieldDescription>
+	</field>
+	<field name="codEstabDestino" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/destinatarios/destinatario/codEstabDestino]]></fieldDescription>
+	</field>
+	<field name="ruta" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/destinatarios/destinatario/ruta]]></fieldDescription>
+	</field>
+	<field name="codDocSustento" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/destinatarios/destinatario/codDocSustento]]></fieldDescription>
+	</field>
+	<field name="numDocSustento" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/destinatarios/destinatario/numDocSustento]]></fieldDescription>
+	</field>
+	<field name="numAutDocSustento" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/destinatarios/destinatario/numAutDocSustento]]></fieldDescription>
+	</field>
+	<field name="fechaEmisionDocSustento" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/destinatarios/destinatario/fechaEmisionDocSustento]]></fieldDescription>
+	</field>
+	<field name="motivoTraslado" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/destinatarios/destinatario/motivoTraslado]]></fieldDescription>
+	</field>
+	<field name="codigoInterno" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/destinatarios/destinatario/detalles/detalle/codigoInterno]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/destinatarios/destinatario/detalles/detalle/descripcion]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/destinatarios/destinatario/detalles/detalle/cantidad]]></fieldDescription>
+	</field>
+	<field name="codigoAdicional" class="java.lang.String">
+		<fieldDescription><![CDATA[/guiaRemision/destinatarios/destinatario/detalles/detalle/codigoAdicional]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="295" splitType="Immediate">
+			<rectangle radius="10">
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="280" y="0" width="275" height="202" uuid="3e2dbc2e-b4b9-4b5b-aeb0-cf18213ecd16"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#013870"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="117" width="275" height="85" uuid="e72d43b3-eba2-4903-b220-bf7e5a727131"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#013870"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="0" y="211" width="555" height="75" uuid="b8e9113f-d322-4963-9f25-6392ffe2f9c8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#013870"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement style="etiqueta-texto" positionType="Float" x="0" y="226" width="165" height="15" uuid="bcafad9a-2f6b-41ea-8b3a-fbdff693048d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Razón Social/Nombres y Apellidos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-texto" positionType="Float" x="0" y="211" width="165" height="15" uuid="9dcab817-94c6-428e-bb6b-0c01732891d7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Identificación (Transportista):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-texto" positionType="Float" x="0" y="271" width="165" height="15" uuid="e907de33-1bbb-4d9b-8ee0-ddd54ae1328e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Fecha Inicio Transporte:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="etiqueta-texto" positionType="Float" x="165" y="226" width="386" height="15" uuid="281876c8-1030-4975-a611-b59d806faea2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{razonSocialTransportista}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="etiqueta-texto" positionType="Float" x="165" y="211" width="386" height="15" uuid="9a340b53-ce30-471a-bfba-48de57edd700"/>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rucTransportista}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="etiqueta-texto" positionType="Float" x="165" y="271" width="97" height="15" uuid="11d8734f-aa38-49bb-b5ca-f08ed0631654"/>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaIniTransporte}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="etiqueta-texto" positionType="Float" x="0" y="241" width="165" height="15" uuid="ff609480-8d16-47cb-a167-21ec4641d2b9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Placa:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="etiqueta-texto" positionType="Float" x="165" y="241" width="386" height="15" uuid="eb5221b1-c0d5-4d6c-919a-bef60f565fee"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{placa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="etiqueta-texto" positionType="Float" x="165" y="256" width="386" height="15" uuid="93de42de-173c-4cf6-9ecd-eb32a04b5d40"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dirPartida}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="etiqueta-texto" positionType="Float" x="0" y="256" width="165" height="15" uuid="e9362b8d-bed4-4c2c-a000-2d1d86c620d6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Punto de Partida:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-texto" positionType="Float" x="262" y="271" width="142" height="15" uuid="89744f50-35d8-41f9-a03a-788a2b1bd6ff"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Fecha Fin Transporte:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="etiqueta-texto" positionType="Float" x="404" y="271" width="147" height="15" uuid="37ff752c-9f32-49b1-b3f3-ed3da2cfadd5"/>
+				<textElement>
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaFinTransporte}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="etiqueta-texto" positionType="FixRelativeToBottom" x="283" y="184" width="268" height="15" uuid="95c4ea51-7cf2-4d88-b599-49ed03f757a7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{claveAcceso}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="etiqueta-texto" positionType="Float" x="0" y="139" width="63" height="15" uuid="dfe68a6b-e8d7-45b3-95c7-02ed32ccb679"/>
+				<textElement verticalAlignment="Top">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Dir Matriz:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="etiqueta-texto" x="0" y="124" width="274" height="15" forecolor="#013870" uuid="1c8e36ce-2437-4107-ae00-773a6b714dc1"/>
+				<textElement verticalAlignment="Top">
+					<font size="10" isBold="true"/>
+					<paragraph leftIndent="4" rightIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{razonSocial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="etiqueta-texto" positionType="Float" x="185" y="184" width="89" height="15" uuid="b1057e4c-2916-40ff-ab70-68c738aadb30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{obligadoContabilidad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="283" y="4" width="39" height="15" uuid="f429d554-32db-4ed9-b71f-4006b0570d3a"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[R.U.C.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="283" y="94" width="160" height="15" uuid="05f88f32-548d-4a4c-97e3-582ce7ebf3a9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[FECHA Y HORA DE AUTORIZACIÓN:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="etiqueta-texto" x="322" y="4" width="229" height="15" uuid="ddcf1f43-570b-412f-ad85-4f4da7cc5109"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ruc}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement style="etiqueta-texto" positionType="Float" x="63" y="139" width="211" height="15" uuid="62ba7a6b-3a9d-4dc8-bca3-5c0f9f0d0214"/>
+				<textElement verticalAlignment="Top">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dirMatriz}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="etiqueta-texto" positionType="Float" x="0" y="184" width="185" height="15" uuid="cbd7bee4-69a1-4709-a796-d7d30cbe6d8d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[OBLIGADO A LLEVAR CONTABILIDAD:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="283" y="154" width="268" height="30" forecolor="#013870" backcolor="#FFFFFF" uuid="edc6f978-e127-4af6-a9b4-ce8cb6fa88d4"/>
+				<jr:Code128 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" moduleWidth="1.0" textPosition="none">
+					<jr:codeExpression><![CDATA[$F{claveAcceso}]]></jr:codeExpression>
+				</jr:Code128>
+			</componentElement>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="283" y="109" width="59" height="15" uuid="658f53af-ef81-4d4a-bd4b-fb79660c98b0"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[AMBIENTE:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="etiqueta-texto" x="283" y="79" width="268" height="15" uuid="da0cd9b0-dc5b-4789-a5c9-8dd5496f26da"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numeroAutorizacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="etiqueta-texto" x="342" y="124" width="209" height="15" uuid="f87a50e2-bdaa-45be-af0e-a4e3c3aa571e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1".equals($F{tipoEmision}) ? "NORMAL" : "INDISPONIBILIDAD DEL SISTEMA"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="283" y="124" width="59" height="15" uuid="030d9d37-0417-4f40-9574-6ae8bba00ce1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[EMISIÓN:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="etiqueta-texto" positionType="Float" x="63" y="154" width="211" height="15" uuid="c34f30b9-e09f-45c2-80a3-8e3a14bc54fb"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dirEstablecimiento}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="283" y="64" width="268" height="15" uuid="d373f55d-e535-4065-95e9-ac4a673ac890"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[NÚMERO DE AUTORIZACIÓN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-texto" positionType="Float" x="0" y="169" width="185" height="15" uuid="cc0bb137-c45b-479f-a87d-b21de442fe1b"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Contribuyente Especial Nro:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="283" y="19" width="268" height="30" uuid="7f0285d1-5c04-49ae-872c-b4ea80893b75"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[GUÍA DE REMISIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="283" y="139" width="268" height="15" uuid="4d96cdb3-790e-4074-aa6b-be5434f4c157"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph rightIndent="2"/>
+				</textElement>
+				<text><![CDATA[CLAVE DE ACCESO]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="etiqueta-texto" x="443" y="94" width="108" height="15" uuid="63d7cac4-adc8-4045-a60d-c3aaa22aebd1">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="7.5"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fechaAutorizacion}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center">
+				<reportElement x="0" y="0" width="274" height="109" uuid="9ae3d9f9-e11d-4e42-831f-36e066fa82aa"/>
+				<imageExpression><![CDATA[new java.io.ByteArrayInputStream(org.apache.commons.codec.binary.Base64.decodeBase64($P{logo}.getBytes()))]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="etiqueta-texto" positionType="Float" x="185" y="169" width="89" height="15" uuid="cb4f094d-a803-46f8-a41e-61e00f27cd48"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{contribuyenteEspecial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="etiqueta-texto" x="305" y="49" width="246" height="15" uuid="dfc7fe60-6656-403b-8c07-01db08e1a188"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estab} + "-" + $F{ptoEmi}+"-"+$F{secuencial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="109" width="209" height="15" uuid="8ba1b548-bcbf-4f5d-aa0d-c2222e6ce30d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1".equals($F{ambiente}) ? "PRUEBAS":"PRODUCCIÓN"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="etiqueta-texto" positionType="Float" x="0" y="154" width="63" height="15" uuid="f8cf4dde-33db-4fcc-80e8-9387ce335c6d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="4"/>
+				</textElement>
+				<text><![CDATA[Dir Sucursal:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-texto" x="283" y="49" width="22" height="15" uuid="21f28056-14a1-4e0d-be0c-8c8f6bd690ef"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[No.:]]></text>
+			</staticText>
+		</band>
+		<band height="183" splitType="Stretch">
+			<componentElement>
+				<reportElement style="border" positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" mode="Opaque" x="0" y="0" width="555" height="183" uuid="90cd9c1d-1559-4c63-b3c8-705037ab7cfa"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="destinatariosDS" uuid="384b921c-04e4-4767-a077-4945f827f798">
+						<datasetParameter name="SUBREPORT_DIR">
+							<datasetParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="hmapTiposDocumentos">
+							<datasetParameterExpression><![CDATA[$P{hmapTiposDocumentos}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/guiaRemision/destinatarios/destinatario")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="183" width="555">
+						<staticText>
+							<reportElement style="etiqueta-celda" mode="Opaque" x="377" y="144" width="100" height="15" forecolor="#333333" uuid="b51c5e7b-efcc-4554-ba35-e226875bf72e"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement textAlignment="Center">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Código Auxiliar]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="etiqueta-celda" mode="Opaque" x="277" y="144" width="100" height="15" forecolor="#333333" uuid="5b4fe528-d3d7-42a1-9c40-8a703c4cbcd9"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement textAlignment="Center">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Código Principal]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="etiqueta-celda" mode="Opaque" x="138" y="144" width="139" height="15" forecolor="#333333" uuid="49a0fd35-9a7b-4a0a-b95f-7af70251c948"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement textAlignment="Center">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Descripción]]></text>
+						</staticText>
+						<componentElement>
+							<reportElement mode="Opaque" x="77" y="159" width="400" height="15" uuid="739e62aa-67bb-4ee3-b376-96bb483385b7"/>
+							<jr:list printOrder="Vertical">
+								<datasetRun subDataset="destinatarioItemsDS" uuid="5d6ce31c-1182-4144-baf5-1c53df578480">
+									<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/destinatario/detalles/detalle")]]></dataSourceExpression>
+								</datasetRun>
+								<jr:listContents height="15" width="400">
+									<textField>
+										<reportElement style="etiqueta-celda" x="0" y="0" width="61" height="15" uuid="e0f6458f-9ad3-4727-b3c8-c3e58dae16b2"/>
+										<box>
+											<pen lineColor="#013870"/>
+											<topPen lineColor="#013870"/>
+											<leftPen lineColor="#013870"/>
+											<bottomPen lineColor="#013870"/>
+											<rightPen lineColor="#013870"/>
+										</box>
+										<textElement>
+											<font size="8"/>
+											<paragraph leftIndent="4"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+									</textField>
+									<textField>
+										<reportElement style="etiqueta-celda" x="61" y="0" width="139" height="15" uuid="bb8bf047-b461-4c5f-a99d-125612ffeeff"/>
+										<box>
+											<pen lineColor="#013870"/>
+											<topPen lineColor="#013870"/>
+											<leftPen lineColor="#013870"/>
+											<bottomPen lineColor="#013870"/>
+											<rightPen lineColor="#013870"/>
+										</box>
+										<textElement>
+											<font size="8"/>
+											<paragraph leftIndent="4"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+									</textField>
+									<textField>
+										<reportElement style="etiqueta-celda" x="200" y="0" width="100" height="15" uuid="3e11186b-d627-4e42-9342-bca390f6a238"/>
+										<box>
+											<pen lineColor="#013870"/>
+											<topPen lineColor="#013870"/>
+											<leftPen lineColor="#013870"/>
+											<bottomPen lineColor="#013870"/>
+											<rightPen lineColor="#013870"/>
+										</box>
+										<textElement>
+											<font size="8"/>
+											<paragraph leftIndent="4"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{codigoInterno}]]></textFieldExpression>
+									</textField>
+									<textField>
+										<reportElement style="etiqueta-celda" x="300" y="0" width="100" height="15" uuid="2c3883c6-d87e-42ab-91e2-d75ff64ae6ff"/>
+										<box>
+											<pen lineColor="#013870"/>
+											<topPen lineColor="#013870"/>
+											<leftPen lineColor="#013870"/>
+											<bottomPen lineColor="#013870"/>
+											<rightPen lineColor="#013870"/>
+										</box>
+										<textElement>
+											<font size="8"/>
+											<paragraph leftIndent="4"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$F{codigoAdicional}]]></textFieldExpression>
+									</textField>
+								</jr:listContents>
+							</jr:list>
+						</componentElement>
+						<textField>
+							<reportElement style="etiqueta-texto" x="165" y="45" width="386" height="15" uuid="f1d78b90-7194-46e2-b8a8-1e1f5746a9f1"/>
+							<textElement>
+								<font size="8"/>
+								<paragraph leftIndent="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{dirDestinatario}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement style="etiqueta-texto" x="165" y="75" width="386" height="15" uuid="301eb6d0-98ab-4e80-a14c-af5f0c0c4ab7"/>
+							<textElement>
+								<font size="8"/>
+								<paragraph leftIndent="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{razonSocialDestinatario}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement style="etiqueta-texto" x="0" y="75" width="165" height="15" uuid="db66612a-a44a-4f11-8052-7d09aaac4761"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<text><![CDATA[Razón Social/Nombres y Apellidos:]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="etiqueta-texto" x="0" y="60" width="165" height="15" uuid="f37f0e8b-72e4-4052-b31d-4d59f3c03f77"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<text><![CDATA[Identificación (Destinatario):]]></text>
+						</staticText>
+						<textField>
+							<reportElement style="etiqueta-texto" x="165" y="30" width="386" height="15" uuid="5a4d8de3-7197-4fb0-95a6-fc03e858eb48"/>
+							<textElement>
+								<font size="8"/>
+								<paragraph leftIndent="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{motivoTraslado}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement style="etiqueta-texto" x="165" y="60" width="386" height="15" uuid="82204e9c-90dc-4235-b8b9-1dbc4191b462"/>
+							<textElement>
+								<font size="8"/>
+								<paragraph leftIndent="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{identificacionDestinatario}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement style="etiqueta-texto" x="165" y="90" width="386" height="15" uuid="65a86140-c9ec-4525-ad6e-d3a6e31a9bd4"/>
+							<textElement>
+								<font size="8"/>
+								<paragraph leftIndent="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{docAduaneroUnico}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement style="etiqueta-texto" x="0" y="45" width="165" height="15" uuid="ca7fb2b2-832f-45e8-b98e-852bf4a80765"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<text><![CDATA[Destino (Punto de llegada):]]></text>
+						</staticText>
+						<textField>
+							<reportElement style="etiqueta-texto" x="165" y="105" width="386" height="15" uuid="1dc9a8ca-a1e1-4c62-9261-655404941e07"/>
+							<textElement>
+								<font size="8"/>
+								<paragraph leftIndent="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{codEstabDestino}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement style="etiqueta-texto" x="0" y="15" width="165" height="15" uuid="42989eef-2da9-4577-ab9d-6fdd6cad902d"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<text><![CDATA[Número de Autorización:]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="etiqueta-texto" x="342" y="0" width="94" height="15" uuid="4d3cf2c4-6a51-4709-855e-8e16378a699c"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+								<paragraph leftIndent="2"/>
+							</textElement>
+							<text><![CDATA[Fecha de Emisión:]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="etiqueta-texto" x="0" y="105" width="165" height="15" uuid="78bc4aa4-0bdc-4aa1-9b04-38f47985f58d"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<text><![CDATA[Código Establecimiento Destino:]]></text>
+						</staticText>
+						<staticText>
+							<reportElement style="etiqueta-texto" x="0" y="0" width="165" height="15" uuid="09a38c19-988c-49b8-b389-fde5553a7b79"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<text><![CDATA[Comprobante de Venta:]]></text>
+						</staticText>
+						<textField>
+							<reportElement style="etiqueta-texto" x="165" y="120" width="386" height="15" uuid="4b237a3e-3401-4f25-b6af-125b7c55e475"/>
+							<textElement>
+								<font size="8"/>
+								<paragraph leftIndent="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{ruta}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement style="etiqueta-texto" x="0" y="30" width="165" height="15" uuid="564dc6df-bce4-410b-ac18-f8ab5f2e46c9"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<text><![CDATA[Motivo Traslado:]]></text>
+						</staticText>
+						<textField>
+							<reportElement style="etiqueta-texto" x="165" y="15" width="386" height="15" uuid="ee97cae2-549c-4e4d-930c-9f10dc1cc525"/>
+							<textElement>
+								<font size="8"/>
+								<paragraph leftIndent="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{numAutDocSustento}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement style="etiqueta-texto" x="0" y="90" width="165" height="15" uuid="88ad8da6-4b01-4ca5-8c9b-d674b42fef8b"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<text><![CDATA[Documento Aduanero:]]></text>
+						</staticText>
+						<textField>
+							<reportElement style="etiqueta-texto" x="165" y="0" width="177" height="15" uuid="1ea596c5-20bf-424b-8216-7e02d46e35cb"/>
+							<textElement>
+								<font size="8"/>
+								<paragraph leftIndent="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{hmapTiposDocumentos}.get($F{codDocSustento}).toString().concat("   ").concat($F{numDocSustento})]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement style="etiqueta-texto" x="0" y="120" width="165" height="15" uuid="65a36980-999a-4e91-b342-3929ba192e3d"/>
+							<textElement verticalAlignment="Middle">
+								<font size="8" isBold="true"/>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<text><![CDATA[Ruta:]]></text>
+						</staticText>
+						<textField>
+							<reportElement style="etiqueta-texto" x="436" y="0" width="115" height="15" uuid="6f54a065-2c9c-4596-85a4-390bb4d52729"/>
+							<textElement>
+								<font size="8"/>
+								<paragraph leftIndent="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{fechaEmisionDocSustento}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement style="etiqueta-celda" mode="Opaque" x="77" y="144" width="61" height="15" forecolor="#333333" uuid="c1d2573f-6e53-4d2d-b58f-55eebe066f58"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement textAlignment="Center">
+								<font size="8" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Cantidad]]></text>
+						</staticText>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="39">
+			<staticText>
+				<reportElement style="etiqueta-celda" mode="Opaque" x="155" y="9" width="244" height="15" forecolor="#333333" uuid="6cac228c-fb29-41da-bda3-9006d1e9b39c"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#013870"/>
+					<topPen lineWidth="0.5" lineColor="#013870"/>
+					<leftPen lineWidth="0.5" lineColor="#013870"/>
+					<bottomPen lineWidth="0.5" lineColor="#013870"/>
+					<rightPen lineWidth="0.5" lineColor="#013870"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Información Adicional]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="155" y="24" width="244" height="15" uuid="5eb1622b-2995-470c-9a28-28a92e49982d"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset2" uuid="7bb5e271-7146-4cb2-922e-9019ab2d6ce5">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/guiaRemision/infoAdicional/campoAdicional")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="15" width="244">
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="122" height="15" forecolor="#333333" uuid="ce3efd06-ba1e-4149-ab62-72ee191c6fa6"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement>
+								<font size="8"/>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="122" y="0" width="122" height="15" forecolor="#333333" uuid="50422111-6979-4055-ad1f-6c87089497e2"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement>
+								<font size="8"/>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{campoAdicional}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

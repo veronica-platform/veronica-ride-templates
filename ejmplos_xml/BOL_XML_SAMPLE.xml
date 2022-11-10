@@ -1,0 +1,124 @@
+<guiaRemision id="comprobante" version="1.0.0">
+    <infoTributaria>
+        <ambiente>1</ambiente>
+        <tipoEmision>1</tipoEmision>
+        <razonSocial>Lorem ipsum dolor sit amet</razonSocial>
+        <nombreComercial>Lorem ipsum dolor sit amet</nombreComercial>
+        <ruc>0000000000000</ruc>
+        <claveAcceso>0000000006000000000000000000000000000000000000000</claveAcceso>
+        <codDoc>06</codDoc>
+        <estab>000</estab>
+        <ptoEmi>000</ptoEmi>
+        <secuencial>000000000</secuencial>
+        <dirMatriz>Lorem ipsum dolor sit amet</dirMatriz>
+    </infoTributaria>
+    <infoGuiaRemision>
+        <dirEstablecimiento>Lorem ipsum dolor sit amet</dirEstablecimiento>
+        <dirPartida>Lorem ipsum</dirPartida>
+        <razonSocialTransportista>Lorem ipsum</razonSocialTransportista>
+        <tipoIdentificacionTransportista>06</tipoIdentificacionTransportista>
+        <rucTransportista>0000000000000</rucTransportista>
+        <obligadoContabilidad>SI</obligadoContabilidad>
+        <contribuyenteEspecial>393</contribuyenteEspecial>
+        <fechaIniTransporte>01/01/2021</fechaIniTransporte>
+        <fechaFinTransporte>01/01/2021</fechaFinTransporte>
+        <placa>XXX-000</placa>
+    </infoGuiaRemision>
+    <destinatarios>
+        <destinatario>
+            <identificacionDestinatario>0000000000000</identificacionDestinatario>
+            <razonSocialDestinatario>Lorem ipsum dolor sit amet</razonSocialDestinatario>
+            <dirDestinatario>Lorem ipsum dolor sit amet</dirDestinatario>
+            <motivoTraslado>VENTA</motivoTraslado>
+            <codEstabDestino>000</codEstabDestino>
+            <ruta>Lorem ipsum</ruta>
+            <codDocSustento>00</codDocSustento>
+            <numDocSustento>000-000-000000000</numDocSustento>
+            <fechaEmisionDocSustento>01/01/2021</fechaEmisionDocSustento>
+            <detalles>
+                <detalle>
+                    <codigoInterno>000000</codigoInterno>
+                    <codigoAdicional>000000</codigoAdicional>
+                    <descripcion>Lorem ipsum</descripcion>
+                    <cantidad>5.00</cantidad>
+                </detalle>
+                <detalle>
+                    <codigoInterno>000000</codigoInterno>
+                    <codigoAdicional>000000</codigoAdicional>
+                    <descripcion>Lorem ipsum dolor sit amet</descripcion>
+                    <cantidad>1.00</cantidad>
+                </detalle>
+                <detalle>
+                    <codigoInterno>000000</codigoInterno>
+                    <codigoAdicional>000000</codigoAdicional>
+                    <descripcion>Lorem ipsum</descripcion>
+                    <cantidad>1.00</cantidad>
+                </detalle>
+                <detalle>
+                    <codigoInterno>000000</codigoInterno>
+                    <codigoAdicional>000000</codigoAdicional>
+                    <descripcion>Lorem ipsum</descripcion>
+                    <cantidad>4.00</cantidad>
+                </detalle>
+                <detalle>
+                    <codigoInterno>000000</codigoInterno>
+                    <codigoAdicional>000000</codigoAdicional>
+                    <descripcion>Lorem ipsum</descripcion>
+                    <cantidad>2.00</cantidad>
+                </detalle>
+                <detalle>
+                    <codigoInterno>000000</codigoInterno>
+                    <codigoAdicional>000000</codigoAdicional>
+                    <descripcion>Lorem ipsum</descripcion>
+                    <cantidad>4.00</cantidad>
+                </detalle>
+                <detalle>
+                    <codigoInterno>000000</codigoInterno>
+                    <codigoAdicional>000000</codigoAdicional>
+                    <descripcion>Lorem ipsum</descripcion>
+                    <cantidad>6.00</cantidad>
+                </detalle>
+                <detalle>
+                    <codigoInterno>000000</codigoInterno>
+                    <codigoAdicional>000000</codigoAdicional>
+                    <descripcion>Lorem ipsum</descripcion>
+                    <cantidad>5.00</cantidad>
+                </detalle>
+                <detalle>
+                    <codigoInterno>000000</codigoInterno>
+                    <codigoAdicional>000000</codigoAdicional>
+                    <descripcion>Lorem ipsum</descripcion>
+                    <cantidad>6.00</cantidad>
+                </detalle>
+                <detalle>
+                    <codigoInterno>000000</codigoInterno>
+                    <codigoAdicional>000000</codigoAdicional>
+                    <descripcion>Lorem ipsum</descripcion>
+                    <cantidad>3.00</cantidad>
+                </detalle>
+                <detalle>
+                    <codigoInterno>000000</codigoInterno>
+                    <codigoAdicional>000000</codigoAdicional>
+                    <descripcion>Lorem ipsum</descripcion>
+                    <cantidad>1.00</cantidad>
+                </detalle>
+                <detalle>
+                    <codigoInterno>000000</codigoInterno>
+                    <codigoAdicional>000000</codigoAdicional>
+                    <descripcion>Lorem ipsum</descripcion>
+                    <cantidad>2.00</cantidad>
+                </detalle>
+                <detalle>
+                    <codigoInterno>000000</codigoInterno>
+                    <codigoAdicional>000000</codigoAdicional>
+                    <descripcion>Lorem ipsum</descripcion>
+                    <cantidad>1.00</cantidad>
+                </detalle>
+            </detalles>
+        </destinatario>
+    </destinatarios>
+    <infoAdicional>
+        <campoAdicional nombre="emailCliente">support@rolandopalermo.com</campoAdicional>
+        <campoAdicional nombre="Direccion">Lorem ipsum dolor sit amet</campoAdicional>
+    </infoAdicional>
+</guiaRemision>
