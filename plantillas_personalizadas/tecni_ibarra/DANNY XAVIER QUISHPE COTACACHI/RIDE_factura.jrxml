@@ -412,7 +412,7 @@
 					<font size="8" isItalic="true"/>
 					<paragraph leftIndent="4" rightIndent="4"/>
 				</textElement>
-				<textFieldExpression><![CDATA[($F{estab} + $F{ptoEmi}).compareToIgnoreCase("002001") == 0 ? "MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE VEHICULOS A GASOLINA, DIESEL, E HIBRIDOS" : ($F{estab} + $F{ptoEmi}).compareToIgnoreCase("002002") == 0 ? "VENTA DE REPUESTOS AUTOMOTRICES LUBRICANTRES Y BATERIAS"  : ""]]></textFieldExpression>
+				<textFieldExpression><![CDATA[($F{estab} + $F{ptoEmi}).compareToIgnoreCase("002001") == 0 ? "MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE VEHICULOS A GASOLINA, DIESEL, E HIBRIDOS" : ($F{estab} + $F{ptoEmi}).compareToIgnoreCase("002002") == 0 ? "VENTA DE REPUESTOS AUTOMOTRICES LUBRICANTES Y BATERIAS"  : ""]]></textFieldExpression>
 			</textField>
 			<frame>
 				<reportElement positionType="Float" stretchType="ElementGroupBottom" mode="Transparent" x="0" y="132" width="275" height="138" backcolor="#FFFFFF" uuid="8cb18679-f19c-478d-8657-4a4daf584f99">
