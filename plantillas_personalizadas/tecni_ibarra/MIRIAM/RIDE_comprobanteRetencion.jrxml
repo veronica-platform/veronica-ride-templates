@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RIDE_comprobanteRetencion" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23078fe1-b005-44ae-8dc0-7a1396cac66c">
 	<property name="ireport.zoom" value="2.1961500000000087"/>
 	<property name="ireport.x" value="205"/>
 	<property name="ireport.y" value="332"/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
 	<style name="etiqueta-texto" hTextAlign="Left" hImageAlign="Left" vTextAlign="Middle" vImageAlign="Middle" isBlankWhenNull="true">
 		<paragraph leftIndent="2"/>
 	</style>
@@ -92,6 +92,40 @@
 			<fieldDescription><![CDATA[valorRetenido]]></fieldDescription>
 		</field>
 	</subDataset>
+	<subDataset name="docsSustentoDS" uuid="e5870359-bd7f-4f1e-b096-e048f2f1a7a9">
+		<parameter name="periodoFiscal" class="java.lang.String"/>
+		<parameter name="hmapTiposDocumentos" class="java.util.HashMap"/>
+		<parameter name="hmapTiposImpuestos" class="java.util.HashMap"/>
+		<parameter name="colorDetalle" class="java.lang.String"/>
+		<parameter name="decimals" class="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[]]>
+		</queryString>
+		<field name="codDocSustento" class="java.lang.String">
+			<fieldDescription><![CDATA[../../codDocSustento]]></fieldDescription>
+		</field>
+		<field name="numDocSustento" class="java.lang.String">
+			<fieldDescription><![CDATA[../../numDocSustento]]></fieldDescription>
+		</field>
+		<field name="fechaEmisionDocSustento" class="java.lang.String">
+			<fieldDescription><![CDATA[../../fechaEmisionDocSustento]]></fieldDescription>
+		</field>
+		<field name="baseImponible" class="java.lang.String">
+			<fieldDescription><![CDATA[baseImponible]]></fieldDescription>
+		</field>
+		<field name="codigo" class="java.lang.String">
+			<fieldDescription><![CDATA[codigo]]></fieldDescription>
+		</field>
+		<field name="porcentajeRetener" class="java.lang.String">
+			<fieldDescription><![CDATA[porcentajeRetener]]></fieldDescription>
+		</field>
+		<field name="valorRetenido" class="java.lang.String">
+			<fieldDescription><![CDATA[valorRetenido]]></fieldDescription>
+		</field>
+		<field name="codigoRetencion" class="java.lang.String">
+			<fieldDescription><![CDATA[codigoRetencion]]></fieldDescription>
+		</field>
+	</subDataset>
 	<parameter name="numeroAutorizacion" class="java.lang.String"/>
 	<parameter name="fechaAutorizacion" class="java.lang.String"/>
 	<parameter name="hmapTiposDocumentos" class="java.util.HashMap"/>
@@ -103,6 +137,7 @@
 	<parameter name="color" class="java.lang.String"/>
 	<parameter name="footer" class="java.lang.String"/>
 	<parameter name="withLogo" class="java.lang.String"/>
+	<parameter name="decimals" class="java.lang.String"/>
 	<queryString language="xPath">
 		<![CDATA[/comprobanteRetencion]]>
 	</queryString>
@@ -682,9 +717,9 @@
 				<text><![CDATA[CÓDIGO RETENCIÓN]]></text>
 			</staticText>
 		</band>
-		<band height="24" splitType="Immediate">
+		<band height="40" splitType="Immediate">
 			<componentElement>
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="555" height="15" uuid="6e8702e3-c4c9-4d7a-a8c5-6ce0f58ab498"/>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="555" height="15" isRemoveLineWhenBlank="true" uuid="6e8702e3-c4c9-4d7a-a8c5-6ce0f58ab498"/>
 				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical" ignoreWidth="true">
 					<datasetRun subDataset="impuestosDS" uuid="8617d4fd-042d-4463-963f-811a6aeb10a6">
 						<datasetParameter name="periodoFiscal">
@@ -832,6 +867,162 @@
 								<paragraph leftIndent="4" rightIndent="4"/>
 							</textElement>
 							<textFieldExpression><![CDATA[$F{codigoRetencion}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="15" width="555" height="15" isRemoveLineWhenBlank="true" uuid="2563e213-232c-4e04-ab97-b3bc4f58aab5"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical" ignoreWidth="true">
+					<datasetRun subDataset="docsSustentoDS" uuid="f3349d99-7201-43a8-a39b-e4ab28b8a4c8">
+						<datasetParameter name="periodoFiscal">
+							<datasetParameterExpression><![CDATA[$F{periodoFiscal}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="hmapTiposImpuestos">
+							<datasetParameterExpression><![CDATA[$P{hmapTiposImpuestos}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="hmapTiposDocumentos">
+							<datasetParameterExpression><![CDATA[$P{hmapTiposDocumentos}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="colorDetalle">
+							<datasetParameterExpression><![CDATA[$P{color}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="decimals">
+							<datasetParameterExpression><![CDATA[$P{decimals}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/comprobanteRetencion/docsSustento/docSustento/retenciones/retencion")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="15" width="555">
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="74" height="15" uuid="93870339-2fb4-4302-998d-3fc2062975b2">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorDetalle}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#000000"/>
+							</box>
+							<textElement>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{hmapTiposDocumentos}.get($F{codDocSustento})]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="ScaleFont">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="74" y="0" width="80" height="15" uuid="bb4bb3ea-f41e-4735-b491-e9f41d948e19">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorDetalle}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#000000"/>
+							</box>
+							<textElement>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{numDocSustento}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="154" y="0" width="55" height="15" uuid="08fdac1f-3b85-455f-b9d2-e33daca2082a">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorDetalle}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Left">
+								<paragraph leftIndent="4" rightIndent="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{fechaEmisionDocSustento}]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="209" y="0" width="49" height="15" uuid="e7a091f3-6a04-40f7-b2c0-612248e00de3">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorDetalle}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#000000"/>
+							</box>
+							<textElement>
+								<font size="8"/>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{periodoFiscal}]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="346" y="0" width="53" height="15" uuid="fa23912e-9be9-4f72-80a6-aceb52aad53a">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorDetalle}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Left">
+								<paragraph leftIndent="4" rightIndent="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{hmapTiposImpuestos}.get($F{codigo})]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="399" y="0" width="53" height="15" uuid="710ccbdc-5559-45a1-bcae-deac0b47663c">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorDetalle}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right">
+								<paragraph leftIndent="4" rightIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{codigoRetencion}]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="258" y="0" width="88" height="15" uuid="d5ba631b-f90e-475e-ab94-5ebe506327da">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorDetalle}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right">
+								<paragraph leftIndent="4" rightIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{baseImponible}==null?"0":$F{baseImponible}))]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="452" y="0" width="58" height="15" uuid="d201fd15-e234-435b-8849-b1a9cda8d7af">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorDetalle}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right">
+								<paragraph leftIndent="4" rightIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{porcentajeRetener}]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="510" y="0" width="45" height="15" uuid="f43c2439-36ea-4d2c-80fb-9ae4fdd6b520">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorDetalle}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right">
+								<paragraph leftIndent="4" rightIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{valorRetenido}==null?"0":$F{valorRetenido}))]]></textFieldExpression>
 						</textField>
 					</jr:listContents>
 				</jr:list>

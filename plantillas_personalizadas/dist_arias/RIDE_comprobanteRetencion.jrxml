@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RIDE_comprobanteRetencion" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23078fe1-b005-44ae-8dc0-7a1396cac66c">
 	<property name="ireport.zoom" value="2.1961500000000087"/>
 	<property name="ireport.x" value="205"/>
 	<property name="ireport.y" value="332"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
 	<style name="etiqueta-texto" hTextAlign="Left" hImageAlign="Left" vTextAlign="Middle" vImageAlign="Middle" isBlankWhenNull="true">
 		<paragraph leftIndent="2"/>
 	</style>
@@ -72,6 +73,35 @@
 		</field>
 		<field name="fechaEmisionDocSustento" class="java.lang.String">
 			<fieldDescription><![CDATA[fechaEmisionDocSustento]]></fieldDescription>
+		</field>
+		<field name="baseImponible" class="java.lang.String">
+			<fieldDescription><![CDATA[baseImponible]]></fieldDescription>
+		</field>
+		<field name="codigo" class="java.lang.String">
+			<fieldDescription><![CDATA[codigo]]></fieldDescription>
+		</field>
+		<field name="porcentajeRetener" class="java.lang.String">
+			<fieldDescription><![CDATA[porcentajeRetener]]></fieldDescription>
+		</field>
+		<field name="valorRetenido" class="java.lang.String">
+			<fieldDescription><![CDATA[valorRetenido]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="docsSustentoDS" uuid="ab18086b-96db-4de5-baa4-c8e3ac651f35">
+		<parameter name="periodoFiscal" class="java.lang.String"/>
+		<parameter name="hmapTiposDocumentos" class="java.util.HashMap"/>
+		<parameter name="hmapTiposImpuestos" class="java.util.HashMap"/>
+		<queryString language="SQL">
+			<![CDATA[]]>
+		</queryString>
+		<field name="codDocSustento" class="java.lang.String">
+			<fieldDescription><![CDATA[../../codDocSustento]]></fieldDescription>
+		</field>
+		<field name="numDocSustento" class="java.lang.String">
+			<fieldDescription><![CDATA[../../numDocSustento]]></fieldDescription>
+		</field>
+		<field name="fechaEmisionDocSustento" class="java.lang.String">
+			<fieldDescription><![CDATA[../../fechaEmisionDocSustento]]></fieldDescription>
 		</field>
 		<field name="baseImponible" class="java.lang.String">
 			<fieldDescription><![CDATA[baseImponible]]></fieldDescription>
@@ -561,9 +591,9 @@
 				</jr:Code128>
 			</componentElement>
 		</band>
-		<band height="24" splitType="Immediate">
+		<band height="39" splitType="Immediate">
 			<componentElement>
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="555" height="15" uuid="6e8702e3-c4c9-4d7a-a8c5-6ce0f58ab498"/>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="555" height="15" isRemoveLineWhenBlank="true" uuid="6e8702e3-c4c9-4d7a-a8c5-6ce0f58ab498"/>
 				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical" ignoreWidth="true">
 					<datasetRun subDataset="impuestosDS" uuid="0112f33f-ecec-4cdb-a482-4b4517cb792c">
 						<datasetParameter name="periodoFiscal">
@@ -679,6 +709,138 @@
 						</textField>
 						<textField>
 							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="150" y="0" width="65" height="15" uuid="9a490617-0c43-43dc-bb48-45e2b9cae7eb"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement textAlignment="Left">
+								<paragraph leftIndent="4" rightIndent="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{fechaEmisionDocSustento}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="15" width="555" height="15" uuid="66c794e4-591e-4a13-9474-c121481ad3c3"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical" ignoreWidth="true">
+					<datasetRun subDataset="docsSustentoDS" uuid="9f36374f-1feb-4d0f-bfbf-b7a4214d3b70">
+						<datasetParameter name="periodoFiscal">
+							<datasetParameterExpression><![CDATA[$F{periodoFiscal}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="hmapTiposImpuestos">
+							<datasetParameterExpression><![CDATA[$P{hmapTiposImpuestos}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="hmapTiposDocumentos">
+							<datasetParameterExpression><![CDATA[$P{hmapTiposDocumentos}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/comprobanteRetencion/docsSustento/docSustento/retenciones/retencion")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="15" width="555">
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="70" height="15" uuid="4aa4491b-c427-4a2d-803b-848e824c7a79"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{hmapTiposDocumentos}.get($F{codDocSustento})]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="70" y="0" width="80" height="15" uuid="4837eca8-040d-4226-b700-5bbc9a00c699"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{numDocSustento}]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="215" y="0" width="51" height="15" uuid="a8dff9c6-a90e-4987-8d07-7a3d5828f5ed"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement>
+								<font size="8"/>
+								<paragraph leftIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{periodoFiscal}]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="266" y="0" width="81" height="15" uuid="8038c41d-539c-4170-962a-1958b9a6f436"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement textAlignment="Right">
+								<paragraph leftIndent="4" rightIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{baseImponible}]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="347" y="0" width="75" height="15" uuid="5b5e9a52-51c5-4f33-b9f4-170a07a2abaa"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement textAlignment="Left">
+								<paragraph leftIndent="4" rightIndent="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{hmapTiposImpuestos}.get($F{codigo})]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="422" y="0" width="68" height="15" uuid="bdfa68ea-b7f7-4200-8ca5-d1f7e77a1d76"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement textAlignment="Right">
+								<paragraph leftIndent="4" rightIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{porcentajeRetener}]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight">
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="490" y="0" width="65" height="15" uuid="b4534dfe-0dcc-4978-aec8-d0eca681b996"/>
+							<box>
+								<pen lineColor="#013870"/>
+								<topPen lineColor="#013870"/>
+								<leftPen lineColor="#013870"/>
+								<bottomPen lineColor="#013870"/>
+								<rightPen lineColor="#013870"/>
+							</box>
+							<textElement textAlignment="Right">
+								<paragraph leftIndent="4" rightIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{valorRetenido}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="150" y="0" width="65" height="15" uuid="ebbafe96-94f7-4f7d-b433-af2645010647"/>
 							<box>
 								<pen lineColor="#013870"/>
 								<topPen lineColor="#013870"/>
