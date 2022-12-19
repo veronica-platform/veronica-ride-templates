@@ -2,7 +2,7 @@
     <infoTributaria>
         <ambiente>1</ambiente>
         <tipoEmision>1</tipoEmision>
-        <razonSocial>Veronica Platform</razonSocial>
+        <razonSocial>Plataforma de facturación electrónica Veronica</razonSocial>
         <nombreComercial>Lorem ipsum dolor sit amet</nombreComercial>
         <ruc>0000000000000</ruc>
         <claveAcceso>0000000001000000000000000000000000000000000000000</claveAcceso>
@@ -49,6 +49,2007 @@
         <valorRetRenta>0.00</valorRetRenta>
     </infoFactura>
     <detalles>
+    <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
+        <detalle>
+            <codigoPrincipal>Lorem ipsum</codigoPrincipal>
+            <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
+            <descripcion>Lorem ipsum dolor sit amet</descripcion>
+            <cantidad>1.0</cantidad>
+            <precioUnitario>19.00</precioUnitario>
+            <descuento>0.00</descuento>
+            <precioTotalSinImpuesto>19.00</precioTotalSinImpuesto>
+            <detallesAdicionales>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+                <detAdicional nombre="Lorem ipsum" valor="Lorem ipsum"></detAdicional>
+            </detallesAdicionales>
+            <impuestos>
+                <impuesto>
+                    <codigo>2</codigo>
+                    <codigoPorcentaje>2</codigoPorcentaje>
+                    <tarifa>12</tarifa>
+                    <baseImponible>19.00</baseImponible>
+                    <valor>2.28</valor>
+                </impuesto>
+            </impuestos>
+        </detalle>
         <detalle>
             <codigoPrincipal>Lorem ipsum</codigoPrincipal>
             <codigoAuxiliar>Lorem ipsum</codigoAuxiliar>
