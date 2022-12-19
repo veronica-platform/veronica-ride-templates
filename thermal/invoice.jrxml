@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RIDE_factura" pageWidth="226" pageHeight="615" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="10" isIgnorePagination="true" uuid="23078fe1-b005-44ae-8dc0-7a1396cac66c">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="thermal_invoice" pageWidth="226" pageHeight="615" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="10" isIgnorePagination="true" uuid="23078fe1-b005-44ae-8dc0-7a1396cac66c">
 	<property name="ireport.zoom" value="2.4157650000000195"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FACTURA.jrdax"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
 	<subDataset name="dataset1" uuid="933f5b64-3caf-4cb5-807d-1c380a8c0890">
 		<parameter name="colorDetalle" class="java.lang.String"/>
 		<parameter name="decimals" class="java.lang.String"/>
@@ -74,13 +83,11 @@
 	<parameter name="numeroAutorizacion" class="java.lang.String"/>
 	<parameter name="fechaAutorizacion" class="java.lang.String"/>
 	<parameter name="hmapFormasPago" class="java.util.HashMap"/>
-	<parameter name="logo" class="java.lang.String"/>
 	<parameter name="telefono" class="java.lang.String"/>
 	<parameter name="email" class="java.lang.String"/>
 	<parameter name="paginaWeb" class="java.lang.String"/>
 	<parameter name="color" class="java.lang.String"/>
 	<parameter name="footer" class="java.lang.String"/>
-	<parameter name="withLogo" class="java.lang.String"/>
 	<parameter name="decimals" class="java.lang.String"/>
 	<queryString language="xPath">
 		<![CDATA[/factura]]>
