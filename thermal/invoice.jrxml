@@ -86,8 +86,6 @@
 	<parameter name="telefono" class="java.lang.String"/>
 	<parameter name="email" class="java.lang.String"/>
 	<parameter name="paginaWeb" class="java.lang.String"/>
-	<parameter name="color" class="java.lang.String"/>
-	<parameter name="footer" class="java.lang.String"/>
 	<parameter name="decimals" class="java.lang.String"/>
 	<queryString language="xPath">
 		<![CDATA[/factura]]>
@@ -308,8 +306,6 @@
 					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<propertyExpression name="net.sf.jasperreports.style.backcolor"><![CDATA[$P{color}]]></propertyExpression>
-					<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.0" lineColor="#4FB7CD"/>
@@ -331,8 +327,6 @@
 					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<propertyExpression name="net.sf.jasperreports.style.backcolor"><![CDATA[$P{color}]]></propertyExpression>
-					<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.0" lineColor="#4FB7CD"/>
@@ -354,8 +348,6 @@
 					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
-					<propertyExpression name="net.sf.jasperreports.style.backcolor"><![CDATA[$P{color}]]></propertyExpression>
-					<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.0" lineColor="#4FB7CD"/>
@@ -377,8 +369,6 @@
 					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<propertyExpression name="net.sf.jasperreports.style.backcolor"><![CDATA[$P{color}]]></propertyExpression>
-					<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.0" lineColor="#4FB7CD"/>
@@ -402,9 +392,7 @@
 				</reportElement>
 				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical" ignoreWidth="true">
 					<datasetRun subDataset="dataset1" uuid="b48388ea-b207-4deb-ab8b-e301d06b3d7a">
-						<datasetParameter name="colorDetalle">
-							<datasetParameterExpression><![CDATA[$P{color}]]></datasetParameterExpression>
-						</datasetParameter>
+						<datasetParameter name="colorDetalle"/>
 						<datasetParameter name="decimals">
 							<datasetParameterExpression><![CDATA[$P{decimals}]]></datasetParameterExpression>
 						</datasetParameter>
@@ -427,7 +415,7 @@
 								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 							</box>
-							<textElement verticalAlignment="Middle">
+							<textElement verticalAlignment="Top">
 								<font size="7"/>
 								<paragraph leftIndent="0"/>
 							</textElement>
@@ -449,7 +437,7 @@
 								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 							</box>
-							<textElement textAlignment="Right" verticalAlignment="Middle">
+							<textElement textAlignment="Right" verticalAlignment="Top">
 								<font size="7"/>
 								<paragraph rightIndent="0"/>
 							</textElement>
@@ -471,7 +459,7 @@
 								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 							</box>
-							<textElement textAlignment="Left" verticalAlignment="Middle">
+							<textElement textAlignment="Left" verticalAlignment="Top">
 								<font size="7"/>
 								<paragraph rightIndent="0"/>
 							</textElement>
@@ -493,7 +481,7 @@
 								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 							</box>
-							<textElement textAlignment="Right" verticalAlignment="Middle">
+							<textElement textAlignment="Right" verticalAlignment="Top">
 								<font size="7"/>
 								<paragraph rightIndent="0"/>
 							</textElement>
@@ -512,8 +500,6 @@
 					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<propertyExpression name="net.sf.jasperreports.style.backcolor"><![CDATA[$P{color}]]></propertyExpression>
-					<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.0" lineColor="#4FB7CD"/>
@@ -539,8 +525,6 @@
 					<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
 					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
-					<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.0" lineColor="#4FB7CD"/>
@@ -556,7 +540,8 @@
 				<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{importeTotal}==null?"0.00":$F{importeTotal}))]]></textFieldExpression>
 			</textField>
 		</band>
-		<band height="120" splitType="Stretch">
+		<band height="10" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<componentElement>
 				<reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="24" y="0" width="162" height="10" uuid="2b2861a9-2fe7-4d7a-9926-23ef6ebf6926">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -565,9 +550,6 @@
 					<datasetRun subDataset="dataset3" uuid="f68d8060-64a3-40d4-b15d-e05230d68ad1">
 						<datasetParameter name="hmapFormasPago">
 							<datasetParameterExpression><![CDATA[$P{hmapFormasPago}]]></datasetParameterExpression>
-						</datasetParameter>
-						<datasetParameter name="colorFormasPago">
-							<datasetParameterExpression><![CDATA[$P{color}]]></datasetParameterExpression>
 						</datasetParameter>
 						<datasetParameter name="decimals">
 							<datasetParameterExpression><![CDATA[$P{decimals}]]></datasetParameterExpression>
@@ -622,8 +604,11 @@
 					</jr:listContents>
 				</jr:list>
 			</componentElement>
+		</band>
+		<band height="10">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField textAdjust="StretchHeight">
-				<reportElement x="0" y="10" width="186" height="10" uuid="654398eb-a992-49cb-8bac-70b6b970e57b">
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="186" height="10" uuid="654398eb-a992-49cb-8bac-70b6b970e57b">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -634,8 +619,11 @@
 				</textElement>
 				<textFieldExpression><![CDATA["Total de artículos: " + $F{numArticulos}]]></textFieldExpression>
 			</textField>
+		</band>
+		<band height="12">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField textAdjust="StretchHeight">
-				<reportElement x="0" y="24" width="186" height="10" forecolor="#000000" uuid="9b21294a-8dc4-4645-a958-176ae847d7f7">
+				<reportElement x="0" y="1" width="186" height="10" forecolor="#000000" uuid="9b21294a-8dc4-4645-a958-176ae847d7f7">
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
@@ -649,33 +637,40 @@
 "<b>DIRECCIÓN:</b> " + $F{direccionComprador}]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement x="0" y="21" width="186" height="1" uuid="52f918c7-026a-4f43-b19e-2dac051a63d0"/>
+				<reportElement x="0" y="0" width="186" height="1" uuid="52f918c7-026a-4f43-b19e-2dac051a63d0"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineStyle="Dashed"/>
 				</graphicElement>
 			</line>
 			<line>
-				<reportElement positionType="Float" x="0" y="38" width="186" height="1" uuid="b1cab973-c1b4-49a8-a0a5-20a4dea7899c"/>
+				<reportElement positionType="Float" x="0" y="11" width="186" height="1" uuid="b1cab973-c1b4-49a8-a0a5-20a4dea7899c"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineStyle="Dashed"/>
 				</graphicElement>
 			</line>
+		</band>
+		<band height="40">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<componentElement>
-				<reportElement positionType="Float" mode="Opaque" x="0" y="43" width="186" height="40" forecolor="#013870" backcolor="#FFFFFF" uuid="ab1d32b3-aa17-427f-90a6-c48443c83c62">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="2" width="186" height="38" forecolor="#013870" backcolor="#FFFFFF" uuid="ab1d32b3-aa17-427f-90a6-c48443c83c62">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<jr:Code128 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" moduleWidth="1.0" textPosition="bottom" verticalQuietZone="0.0">
 					<jr:codeExpression><![CDATA[$F{claveAcceso}]]></jr:codeExpression>
 				</jr:Code128>
 			</componentElement>
-			<staticText>
-				<reportElement positionType="Float" x="0" y="84" width="186" height="36" uuid="f7f30923-c71e-4efe-b004-d8b9ae5143f0"/>
-				<textElement>
-					<font size="6"/>
-				</textElement>
-				<text><![CDATA[ESTE DOCUMENTO NO TIENE VALOR TRIBUTARIO, SU FACTURA PODRA SER CONSULTADA EN SU PORTAL DEL SERI. EN CASO DE NECESITAR EL DOCUMENTO IMPRESO, PUEDE SOLICITAR LA IMPRESIÓN EN EL PUNTO DE VENTA.]]></text>
-			</staticText>
 		</band>
 	</detail>
+	<pageFooter>
+		<band height="36">
+			<staticText>
+				<reportElement positionType="Float" x="0" y="0" width="186" height="36" uuid="f7f30923-c71e-4efe-b004-d8b9ae5143f0"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[ESTE DOCUMENTO NO TIENE VALOR TRIBUTARIO, SU FACTURA PODRA SER CONSULTADA EN EL PORTAL DEL SRI. EN CASO DE NECESITAR EL DOCUMENTO IMPRESO, PUEDE SOLICITAR LA IMPRESIÓN EN EL PUNTO DE VENTA.]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
 </jasperReport>
