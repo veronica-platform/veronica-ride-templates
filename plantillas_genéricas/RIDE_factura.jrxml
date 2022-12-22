@@ -4,7 +4,7 @@
 	<property name="ireport.zoom" value="2.4157650000000195"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FACTURA.jrdax"/>
 	<style name="etiqueta-texto" hTextAlign="Left" hImageAlign="Left" vTextAlign="Middle" vImageAlign="Middle" isBlankWhenNull="true">
 		<paragraph leftIndent="2"/>
 	</style>
@@ -80,6 +80,47 @@
 			<fieldDescription><![CDATA[@nombre]]></fieldDescription>
 		</field>
 	</subDataset>
+	<subDataset name="datasetReembolsos" uuid="e44daa36-fb47-49bf-b79b-10318a919313">
+		<parameter name="colorReembolsos" class="java.lang.String"/>
+		<parameter name="decimals" class="java.lang.String"/>
+		<parameter name="hmapTiposDocumentos" class="java.util.HashMap"/>
+		<queryString language="xPath">
+			<![CDATA[/factura/reembolsos/reembolsoDetalle]]>
+		</queryString>
+		<field name="identificacionProveedorReembolso" class="java.lang.String">
+			<fieldDescription><![CDATA[identificacionProveedorReembolso]]></fieldDescription>
+		</field>
+		<field name="codDocReembolso" class="java.lang.String">
+			<fieldDescription><![CDATA[codDocReembolso]]></fieldDescription>
+		</field>
+		<field name="estabDocReembolso" class="java.lang.String">
+			<fieldDescription><![CDATA[estabDocReembolso]]></fieldDescription>
+		</field>
+		<field name="ptoEmiDocReembolso" class="java.lang.String">
+			<fieldDescription><![CDATA[ptoEmiDocReembolso]]></fieldDescription>
+		</field>
+		<field name="secuencialDocReembolso" class="java.lang.String">
+			<fieldDescription><![CDATA[secuencialDocReembolso]]></fieldDescription>
+		</field>
+		<field name="fechaEmisionDocReembolso" class="java.lang.String">
+			<fieldDescription><![CDATA[fechaEmisionDocReembolso]]></fieldDescription>
+		</field>
+		<field name="base0" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[detalleImpuestos/detalleImpuesto[codigo='2' and codigoPorcentaje='0']/baseImponibleReembolso]]></fieldDescription>
+		</field>
+		<field name="base12" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[detalleImpuestos/detalleImpuesto[codigo='2' and codigoPorcentaje='2']/baseImponibleReembolso]]></fieldDescription>
+		</field>
+		<field name="iva" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[sum(detalleImpuestos/detalleImpuesto/impuestoReembolso)]]></fieldDescription>
+		</field>
+		<field name="baseImponibleReembolso" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[sum(detalleImpuestos/detalleImpuesto/baseImponibleReembolso)]]></fieldDescription>
+		</field>
+		<field name="impuestoReembolso" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[sum(detalleImpuestos/detalleImpuesto/impuestoReembolso)]]></fieldDescription>
+		</field>
+	</subDataset>
 	<parameter name="numeroAutorizacion" class="java.lang.String"/>
 	<parameter name="fechaAutorizacion" class="java.lang.String"/>
 	<parameter name="hmapFormasPago" class="java.util.HashMap"/>
@@ -91,6 +132,7 @@
 	<parameter name="footer" class="java.lang.String"/>
 	<parameter name="withLogo" class="java.lang.String"/>
 	<parameter name="decimals" class="java.lang.String"/>
+	<parameter name="hmapTiposDocumentos" class="java.util.HashMap"/>
 	<queryString language="xPath">
 		<![CDATA[/factura]]>
 	</queryString>
@@ -225,6 +267,12 @@
 	</field>
 	<field name="regimenRimpe" class="java.lang.String">
 		<fieldDescription><![CDATA[infoTributaria/contribuyenteRimpe]]></fieldDescription>
+	</field>
+	<field name="numReembolsos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[count(/factura/reembolsos/reembolsoDetalle)]]></fieldDescription>
+	</field>
+	<field name="identificacionProveedorReembolso" class="java.lang.String">
+		<fieldDescription><![CDATA[reembolsos/reembolsoDetalle/identificacionProveedorReembolso]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
@@ -700,7 +748,7 @@
 				<text><![CDATA[DESCUENTO]]></text>
 			</staticText>
 		</band>
-		<band height="25" splitType="Immediate">
+		<band height="24" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<componentElement>
 				<reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="555" height="15" uuid="6e8702e3-c4c9-4d7a-a8c5-6ce0f58ab498"/>
@@ -804,6 +852,312 @@
 								<paragraph rightIndent="4"/>
 							</textElement>
 							<textFieldExpression><![CDATA[$F{precioUnitario}.trim()]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="71">
+			<printWhenExpression><![CDATA[$F{numReembolsos} > 0]]></printWhenExpression>
+			<staticText>
+				<reportElement style="etiqueta-texto" positionType="Float" x="0" y="0" width="555" height="15" uuid="cad934ff-e037-4178-8be0-8962c495fbeb">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<text><![CDATA[DOCUMENTOS DE REEMBOLSO DE GASTOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="0" y="15" width="70" height="30" forecolor="#FFFFFF" backcolor="#4FB7CD" uuid="fcf46033-0e37-4978-ac73-2db9deae5d6f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<propertyExpression name="net.sf.jasperreports.style.backcolor"><![CDATA[$P{color}]]></propertyExpression>
+					<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROVEEDOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="70" y="15" width="50" height="30" forecolor="#FFFFFF" backcolor="#4FB7CD" uuid="ebfe20ea-aec0-4c6a-b084-685286868a49">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<propertyExpression name="net.sf.jasperreports.style.backcolor"><![CDATA[$P{color}]]></propertyExpression>
+					<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPO DOC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="120" y="15" width="90" height="30" forecolor="#FFFFFF" backcolor="#4FB7CD" uuid="39730385-4c67-4fd7-8bd1-e341fab3b26d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<propertyExpression name="net.sf.jasperreports.style.backcolor"><![CDATA[$P{color}]]></propertyExpression>
+					<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[N° DOCUMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="210" y="15" width="65" height="30" forecolor="#FFFFFF" backcolor="#4FB7CD" uuid="5de5967e-41cc-48a4-b08c-8ed1536592cb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<propertyExpression name="net.sf.jasperreports.style.backcolor"><![CDATA[$P{color}]]></propertyExpression>
+					<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="275" y="15" width="70" height="30" forecolor="#FFFFFF" backcolor="#4FB7CD" uuid="a7e5a5ba-266c-437d-a837-c5b079491e94">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<propertyExpression name="net.sf.jasperreports.style.backcolor"><![CDATA[$P{color}]]></propertyExpression>
+					<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BASE 0%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="345" y="15" width="70" height="30" forecolor="#FFFFFF" backcolor="#4FB7CD" uuid="52f7f051-65b2-48da-827e-f096b98233f2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<propertyExpression name="net.sf.jasperreports.style.backcolor"><![CDATA[$P{color}]]></propertyExpression>
+					<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BASE 12%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="415" y="15" width="70" height="30" forecolor="#FFFFFF" backcolor="#4FB7CD" uuid="2c899992-4f31-4587-8baf-43b92f5924aa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<propertyExpression name="net.sf.jasperreports.style.backcolor"><![CDATA[$P{color}]]></propertyExpression>
+					<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[IVA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="485" y="15" width="70" height="30" forecolor="#FFFFFF" backcolor="#4FB7CD" uuid="18cb9b79-295e-4923-97e8-7fc8a9ac90d0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<propertyExpression name="net.sf.jasperreports.style.backcolor"><![CDATA[$P{color}]]></propertyExpression>
+					<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="45" width="555" height="15" uuid="9e7e6fa7-b8e8-483f-8263-a6ad869b8828"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical" ignoreWidth="true">
+					<datasetRun subDataset="datasetReembolsos" uuid="3bdfae62-e3f9-4b2a-9456-762466e9e256">
+						<datasetParameter name="colorReembolsos">
+							<datasetParameterExpression><![CDATA[$P{color}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="decimals">
+							<datasetParameterExpression><![CDATA[$P{decimals}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="hmapTiposDocumentos">
+							<datasetParameterExpression><![CDATA[$P{hmapTiposDocumentos}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/factura/reembolsos/reembolsoDetalle")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="15" width="555">
+						<textField>
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="70" height="15" uuid="10c5c1ff-9f45-49f3-9fb0-d9406506d095">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorReembolsos}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+							</box>
+							<textElement textAlignment="Left">
+								<paragraph leftIndent="4" rightIndent="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{identificacionProveedorReembolso}.trim()]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="70" y="0" width="50" height="15" uuid="e6f88e61-164a-40f0-841a-41e59a102c71">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorReembolsos}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+							</box>
+							<textElement textAlignment="Left" markup="none">
+								<paragraph leftIndent="4" rightIndent="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{hmapTiposDocumentos}.get($F{codDocReembolso})]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="120" y="0" width="90" height="15" uuid="ec344369-7287-4807-8ea4-aca67290b96b">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorReembolsos}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+							</box>
+							<textElement textAlignment="Left" markup="none">
+								<paragraph leftIndent="4" rightIndent="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{estabDocReembolso} + "-" + $F{ptoEmiDocReembolso} + "-" +$F{secuencialDocReembolso}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="210" y="0" width="65" height="15" uuid="95ac4b7a-91c3-4229-a887-70f91fa2b5b6">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorReembolsos}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+							</box>
+							<textElement textAlignment="Left" markup="none">
+								<paragraph leftIndent="4" rightIndent="0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{fechaEmisionDocReembolso}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="485" y="0" width="70" height="15" uuid="2c47f6a1-6d1f-4caa-ad39-85a231896faf">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorReembolsos}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+							</box>
+							<textElement textAlignment="Right" markup="none">
+								<paragraph leftIndent="0" rightIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{baseImponibleReembolso}.add($F{impuestoReembolso})]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="275" y="0" width="70" height="15" uuid="2a4a5791-919c-4b46-bcfc-f5fd18f78f26">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorReembolsos}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+							</box>
+							<textElement textAlignment="Right" markup="none">
+								<paragraph leftIndent="0" rightIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{base0}==null?new java.math.BigDecimal("0"):$F{base0}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="345" y="0" width="70" height="15" uuid="ea251aa5-f7d7-43d5-bc62-f993ff8cbd3a">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorReembolsos}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+							</box>
+							<textElement textAlignment="Right" markup="none">
+								<paragraph leftIndent="0" rightIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{base12}==null?new java.math.BigDecimal("0"):$F{base12}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="415" y="0" width="70" height="15" uuid="446153f6-905b-4883-92e5-f213b25f1d04">
+								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+								<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{colorReembolsos}]]></propertyExpression>
+							</reportElement>
+							<box>
+								<pen lineWidth="1.0" lineColor="#4FB7CD"/>
+							</box>
+							<textElement textAlignment="Right" markup="none">
+								<paragraph leftIndent="0" rightIndent="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{iva}==null?new java.math.BigDecimal("0"):$F{iva}]]></textFieldExpression>
 						</textField>
 					</jr:listContents>
 				</jr:list>
@@ -1363,6 +1717,7 @@
 				</textField>
 			</frame>
 		</band>
+		<band height="80"/>
 	</detail>
 	<pageFooter>
 		<band height="38">
