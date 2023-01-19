@@ -4,7 +4,7 @@
 	<property name="ireport.zoom" value="1.996500000000016"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="NC.jrdax"/>
 	<style name="etiqueta-texto" hTextAlign="Left" hImageAlign="Left" vTextAlign="Middle" vImageAlign="Middle" isBlankWhenNull="true">
 		<paragraph leftIndent="2"/>
 	</style>
@@ -771,7 +771,7 @@
 							</textElement>
 							<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{precioTotalSinImpuesto}==null?"0":$F{precioTotalSinImpuesto}))]]></textFieldExpression>
 						</textField>
-						<textField>
+						<textField textAdjust="StretchHeight">
 							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="50" y="0" width="50" height="15" uuid="3faa6002-8d52-49ad-9cf6-dd65986dc10b">
 								<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
 								<property name="net.sf.jasperreports.style.pen.lineStyle" value="Solid"/>
