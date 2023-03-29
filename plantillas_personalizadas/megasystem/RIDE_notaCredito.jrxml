@@ -439,13 +439,13 @@
 				</textElement>
 				<textFieldExpression><![CDATA["\n" + $F{razonSocial}.toUpperCase() + "\n"]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement positionType="Float" x="3" y="120" width="267" height="15" isRemoveLineWhenBlank="true" uuid="4108753e-a77a-40ed-9376-fe29f6eed0f1">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<printWhenExpression><![CDATA[!$F{regimenRimpe}.isEmpty()]]></printWhenExpression>
 				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="html">
 					<font size="8" isBold="false"/>
 					<paragraph leftIndent="4" rightIndent="4"/>
 				</textElement>
@@ -492,7 +492,7 @@
 						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/notaCredito/detalles/detalle")]]></dataSourceExpression>
 					</datasetRun>
 					<jr:listContents height="15" width="548">
-						<textField textAdjust="StretchHeight">
+						<textField textAdjust="ScaleFont">
 							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="68" height="15" uuid="c451eaaa-90e2-4a9c-a9df-9600a2723b9e">
 								<property name="com.jaspersoft.studio.unit.width" value="px"/>
 							</reportElement>

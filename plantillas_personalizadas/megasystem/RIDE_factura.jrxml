@@ -386,13 +386,13 @@
 				</textElement>
 				<textFieldExpression><![CDATA["\n" + $F{razonSocial}.toUpperCase() + "\n"]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField textAdjust="ScaleFont">
 				<reportElement positionType="Float" x="3" y="120" width="267" height="15" isRemoveLineWhenBlank="true" uuid="b078611a-eccc-4ccc-a9f0-c474c6209602">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
 					<printWhenExpression><![CDATA[!$F{regimenRimpe}.isEmpty()]]></printWhenExpression>
 				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="html">
 					<font size="8" isBold="false"/>
 					<paragraph leftIndent="4" rightIndent="4"/>
 				</textElement>
@@ -591,7 +591,7 @@
 						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/factura/detalles/detalle")]]></dataSourceExpression>
 					</datasetRun>
 					<jr:listContents height="15" width="548">
-						<textField textAdjust="StretchHeight">
+						<textField textAdjust="ScaleFont">
 							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="68" height="15" uuid="c8afb1d2-b8e1-484b-8566-d2d86332b9c4"/>
 							<box>
 								<pen lineColor="#013870"/>
