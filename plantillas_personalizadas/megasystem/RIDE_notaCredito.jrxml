@@ -437,7 +437,7 @@
 					<font size="8" isBold="true"/>
 					<paragraph leftIndent="4" rightIndent="4"/>
 				</textElement>
-				<textFieldExpression><![CDATA["\n" + $F{razonSocial}.toUpperCase() + "\n"]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{razonSocial}.toUpperCase()]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="ScaleFont">
 				<reportElement positionType="Float" x="3" y="120" width="267" height="15" isRemoveLineWhenBlank="true" uuid="4108753e-a77a-40ed-9376-fe29f6eed0f1">
