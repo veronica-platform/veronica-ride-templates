@@ -77,6 +77,7 @@
 		<parameter name="colorReembolsos" class="java.lang.String"/>
 		<parameter name="hmapCountries" class="java.util.HashMap"/>
 		<parameter name="hmapRefundProviderTypes" class="java.util.HashMap"/>
+		<parameter name="hmapTiposIdentificaciones" class="java.util.HashMap"/>
 		<queryString language="xPath">
 			<![CDATA[/liquidacionCompra/reembolsos/reembolsoDetalle]]>
 		</queryString>
@@ -140,6 +141,7 @@
 	<parameter name="hmapTiposDocumentos" class="java.util.HashMap"/>
 	<parameter name="hmapCountries" class="java.util.HashMap"/>
 	<parameter name="hmapRefundProviderTypes" class="java.util.HashMap"/>
+	<parameter name="hmapTiposIdentificaciones" class="java.util.HashMap"/>
 	<queryString language="xPath">
 		<![CDATA[/liquidacionCompra]]>
 	</queryString>
@@ -919,7 +921,7 @@
 			<componentElement>
 				<reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="45" width="555" height="15" isPrintWhenDetailOverflows="true" uuid="659f65c4-d6f0-408a-9d86-a4fb57236cbb"/>
 				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical" ignoreWidth="true">
-					<datasetRun subDataset="datasetReembolsos" uuid="d0dc1de9-d04b-440d-ad7d-5d05f45d6418">
+					<datasetRun subDataset="datasetReembolsos" uuid="1e81969c-dc37-4126-8f78-f15c2202aa33">
 						<datasetParameter name="decimals">
 							<datasetParameterExpression><![CDATA[$P{decimals}]]></datasetParameterExpression>
 						</datasetParameter>
@@ -934,6 +936,9 @@
 						</datasetParameter>
 						<datasetParameter name="hmapRefundProviderTypes">
 							<datasetParameterExpression><![CDATA[$P{hmapRefundProviderTypes}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="hmapTiposIdentificaciones">
+							<datasetParameterExpression><![CDATA[$P{hmapTiposIdentificaciones}]]></datasetParameterExpression>
 						</datasetParameter>
 						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/liquidacionCompra/reembolsos/reembolsoDetalle")]]></dataSourceExpression>
 					</datasetRun>
@@ -971,7 +976,7 @@
 							<textElement textAlignment="Left" markup="none">
 								<paragraph leftIndent="2" rightIndent="2"/>
 							</textElement>
-							<textFieldExpression><![CDATA[$F{tipoIdentificacionProveedorReembolso}.trim()]]></textFieldExpression>
+							<textFieldExpression><![CDATA[$P{hmapTiposIdentificaciones}.get($F{tipoIdentificacionProveedorReembolso})]]></textFieldExpression>
 						</textField>
 						<textField textAdjust="StretchHeight">
 							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="141" y="0" width="48" height="15" uuid="bbd66b1f-c205-49cb-abb7-7bba5f8aca6d">
