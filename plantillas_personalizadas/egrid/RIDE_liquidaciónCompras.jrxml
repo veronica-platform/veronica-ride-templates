@@ -259,14 +259,20 @@
 	<field name="regimenRimpe" class="java.lang.String">
 		<fieldDescription><![CDATA[infoTributaria/contribuyenteRimpe]]></fieldDescription>
 	</field>
+	<field name="codigoPrincipalReembolso" class="java.lang.String">
+		<fieldDescription><![CDATA[/liquidacionCompra/detalles/detalle[1]/codigoPrincipal]]></fieldDescription>
+	</field>
 	<field name="numReembolsos" class="java.lang.Integer">
 		<fieldDescription><![CDATA[count(/liquidacionCompra/reembolsos/reembolsoDetalle)]]></fieldDescription>
+	</field>
+	<field name="motivoReembolso" class="java.lang.String">
+		<fieldDescription><![CDATA[/liquidacionCompra/detalles/detalle[1]/descripcion]]></fieldDescription>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="268" splitType="Immediate">
+		<band height="239" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<image hAlign="Center" onErrorType="Icon">
 				<reportElement x="0" y="0" width="184" height="80" isRemoveLineWhenBlank="true" uuid="2c5f845e-fcee-498b-aaec-7627739bbc5b">
@@ -589,7 +595,7 @@
 					<textFieldExpression><![CDATA["<b>CI/RUC:</b> " + $F{identificacionProveedor}]]></textFieldExpression>
 				</textField>
 				<textField textAdjust="StretchHeight">
-					<reportElement style="etiqueta-texto" positionType="Float" x="0" y="31" width="555" height="15" uuid="ce12af2c-6197-418c-922a-55f98ef95d5f">
+					<reportElement style="etiqueta-texto" positionType="Float" x="0" y="31" width="368" height="15" uuid="ce12af2c-6197-418c-922a-55f98ef95d5f">
 						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 					</reportElement>
 					<box>
@@ -601,9 +607,44 @@
 					</textElement>
 					<textFieldExpression><![CDATA["<b>DIRECCIÓN:</b> " + $F{direccionProveedor}]]></textFieldExpression>
 				</textField>
+				<textField>
+					<reportElement style="etiqueta-texto" positionType="Float" x="368" y="16" width="187" height="15" uuid="7711c9c3-48a8-4672-8c45-b993850aac24">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<printWhenExpression><![CDATA[$F{numReembolsos} > 0]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement markup="html">
+						<font size="7"/>
+						<paragraph leftIndent="4"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<b>CÓDIGO:</b> " + $F{codigoPrincipalReembolso}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="etiqueta-texto" positionType="Float" x="368" y="31" width="187" height="15" uuid="4949a5b6-4d0a-4915-add8-e69b07456cd7">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<printWhenExpression><![CDATA[$F{numReembolsos} > 0]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement markup="html">
+						<font size="7"/>
+						<paragraph leftIndent="4"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<b>MOTIVO:</b> " + $F{motivoReembolso}]]></textFieldExpression>
+				</textField>
 			</frame>
+		</band>
+		<band height="30">
+			<printWhenExpression><![CDATA[$F{numReembolsos} <= 0]]></printWhenExpression>
 			<staticText>
-				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="363" y="238" width="64" height="30" forecolor="#000000" backcolor="#C5E0FC" uuid="7de39dda-1fad-4e06-8d1d-2e82f87daf1e">
+				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="363" y="0" width="64" height="30" forecolor="#000000" backcolor="#C5E0FC" uuid="7de39dda-1fad-4e06-8d1d-2e82f87daf1e">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
 					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
@@ -620,7 +661,7 @@
 				<text><![CDATA[PRECIO UNITARIO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="68" y="238" width="243" height="30" forecolor="#000000" backcolor="#C5E0FC" uuid="e3396b39-c1ae-4b30-b3c0-61e6b0865653">
+				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="68" y="0" width="243" height="30" forecolor="#000000" backcolor="#C5E0FC" uuid="e3396b39-c1ae-4b30-b3c0-61e6b0865653">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
 					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
@@ -637,7 +678,7 @@
 				<text><![CDATA[DESCRIPCIÓN]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="311" y="238" width="52" height="30" forecolor="#000000" backcolor="#C5E0FC" uuid="64b90c9a-eb50-43c9-bbc1-a2c195acc8c2">
+				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="311" y="0" width="52" height="30" forecolor="#000000" backcolor="#C5E0FC" uuid="64b90c9a-eb50-43c9-bbc1-a2c195acc8c2">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
 					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
@@ -654,7 +695,7 @@
 				<text><![CDATA[CANTIDAD]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="0" y="238" width="68" height="30" forecolor="#000000" backcolor="#C5E0FC" uuid="e1abfec0-f1dd-4cd9-bd71-b225e683e512">
+				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="0" y="0" width="68" height="30" forecolor="#000000" backcolor="#C5E0FC" uuid="e1abfec0-f1dd-4cd9-bd71-b225e683e512">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
 					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
@@ -671,7 +712,7 @@
 				<text><![CDATA[CÓDIGO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="485" y="238" width="70" height="30" forecolor="#000000" backcolor="#C5E0FC" uuid="2e04d49a-83c1-4a51-aa93-915faca73a49">
+				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="485" y="0" width="70" height="30" forecolor="#000000" backcolor="#C5E0FC" uuid="2e04d49a-83c1-4a51-aa93-915faca73a49">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
 					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
@@ -688,7 +729,7 @@
 				<text><![CDATA[VALOR VENTA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="427" y="238" width="58" height="30" forecolor="#000000" backcolor="#C5E0FC" uuid="f9b832a3-ee03-423c-862d-59d0bb903443">
+				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="427" y="0" width="58" height="30" forecolor="#000000" backcolor="#C5E0FC" uuid="f9b832a3-ee03-423c-862d-59d0bb903443">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
 					<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
@@ -708,6 +749,7 @@
 		<band/>
 		<band height="22" splitType="Immediate">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$F{numReembolsos} <= 0]]></printWhenExpression>
 			<componentElement>
 				<reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="555" height="15" uuid="6e8702e3-c4c9-4d7a-a8c5-6ce0f58ab498"/>
 				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical" ignoreWidth="true">
