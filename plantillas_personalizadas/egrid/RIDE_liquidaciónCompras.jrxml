@@ -268,6 +268,24 @@
 	<field name="motivoReembolso" class="java.lang.String">
 		<fieldDescription><![CDATA[/liquidacionCompra/detalles/detalle[1]/descripcion]]></fieldDescription>
 	</field>
+	<field name="subtotal15" class="java.lang.String">
+		<fieldDescription><![CDATA[infoLiquidacionCompra/totalConImpuestos/totalImpuesto[codigo='2' and codigoPorcentaje='4']/baseImponible]]></fieldDescription>
+	</field>
+	<field name="iva15" class="java.lang.String">
+		<fieldDescription><![CDATA[infoLiquidacionCompra/totalConImpuestos/totalImpuesto[codigo='2' and codigoPorcentaje='4']/valor]]></fieldDescription>
+	</field>
+	<field name="subtotal5" class="java.lang.String">
+		<fieldDescription><![CDATA[infoLiquidacionCompra/totalConImpuestos/totalImpuesto[codigo='2' and codigoPorcentaje='5']/baseImponible]]></fieldDescription>
+	</field>
+	<field name="iva5" class="java.lang.String">
+		<fieldDescription><![CDATA[infoLiquidacionCompra/totalConImpuestos/totalImpuesto[codigo='2' and codigoPorcentaje='5']/valor]]></fieldDescription>
+	</field>
+	<field name="subtotalEspecial" class="java.lang.String">
+		<fieldDescription><![CDATA[infoLiquidacionCompra/totalConImpuestos/totalImpuesto[codigo='2' and codigoPorcentaje='8']/baseImponible]]></fieldDescription>
+	</field>
+	<field name="ivaEspecial" class="java.lang.String">
+		<fieldDescription><![CDATA[infoLiquidacionCompra/totalConImpuestos/totalImpuesto[codigo='2' and codigoPorcentaje='8']/valor]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -1210,9 +1228,9 @@
 				<text><![CDATA[AUTORI]]></text>
 			</staticText>
 		</band>
-		<band height="165">
+		<band height="254">
 			<frame>
-				<reportElement mode="Opaque" x="0" y="0" width="555" height="165" isRemoveLineWhenBlank="true" uuid="087578f1-fdf3-425e-a043-94a47a3b17e0"/>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="254" isRemoveLineWhenBlank="true" uuid="087578f1-fdf3-425e-a043-94a47a3b17e0"/>
 				<frame>
 					<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="276" height="32" isRemoveLineWhenBlank="true" uuid="1354acfa-3443-4546-91bb-4b4ef563b132"/>
 					<staticText>
@@ -1420,347 +1438,548 @@
 						</jr:list>
 					</componentElement>
 				</frame>
-				<textField isBlankWhenNull="true">
-					<reportElement style="etiqueta-celda" x="485" y="75" width="70" height="15" uuid="29d390a5-9ef0-4eba-895c-89d8151ad754">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Right">
-						<paragraph rightIndent="4"/>
-					</textElement>
-					<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{totalDescuento}==null?"0.00":$F{totalDescuento}))]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement style="etiqueta-celda" x="363" y="0" width="122" height="15" uuid="17764608-3f67-4939-8008-52fd934b9801">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement>
-						<font size="7" isBold="false"/>
-						<paragraph leftIndent="4"/>
-					</textElement>
-					<text><![CDATA[SUBTOTAL 12%]]></text>
-				</staticText>
-				<staticText>
-					<reportElement style="etiqueta-celda" x="363" y="75" width="122" height="15" uuid="554fbd16-1c06-4c8f-8126-0c7c2f98b6d8">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement>
-						<font size="7" isBold="false"/>
-						<paragraph leftIndent="4"/>
-					</textElement>
-					<text><![CDATA[TOTAL DESCUENTO]]></text>
-				</staticText>
-				<staticText>
-					<reportElement style="etiqueta-celda" x="363" y="15" width="122" height="15" uuid="8dda3ea5-c8ce-4abf-be28-a56b8c153df8">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement>
-						<font size="7" isBold="false"/>
-						<paragraph leftIndent="4"/>
-					</textElement>
-					<text><![CDATA[SUBTOTAL 0%]]></text>
-				</staticText>
-				<staticText>
-					<reportElement style="etiqueta-celda" x="363" y="45" width="122" height="15" uuid="0536f443-213b-4fa1-974c-f25ffdbd6a24">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement>
-						<font size="7" isBold="false"/>
-						<paragraph leftIndent="4"/>
-					</textElement>
-					<text><![CDATA[SUBTOTAL EXCENTO DE IVA]]></text>
-				</staticText>
-				<staticText>
-					<reportElement style="etiqueta-celda" x="363" y="105" width="122" height="15" uuid="0d3ea698-9057-400f-8dd3-ef970e8a448a">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement>
-						<font size="7" isBold="false"/>
-						<paragraph leftIndent="4"/>
-					</textElement>
-					<text><![CDATA[IVA 12%]]></text>
-				</staticText>
-				<staticText>
-					<reportElement style="etiqueta-celda" x="363" y="30" width="122" height="15" uuid="c04ffdf7-69b5-44f9-9406-0ff0dcc35212">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement>
-						<font size="7" isBold="false"/>
-						<paragraph leftIndent="4"/>
-					</textElement>
-					<text><![CDATA[SUBTOTAL NO OBJETO DE IVA]]></text>
-				</staticText>
-				<textField isBlankWhenNull="true">
-					<reportElement style="etiqueta-celda" x="485" y="30" width="70" height="15" uuid="8d979514-6a8e-4322-a2ab-464c578eb5ff">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Right">
-						<paragraph rightIndent="4"/>
-					</textElement>
-					<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{subtotalNoObjeto}==null?"0.00":$F{subtotalNoObjeto}))]]></textFieldExpression>
-				</textField>
-				<textField isBlankWhenNull="true">
-					<reportElement style="etiqueta-celda" x="485" y="60" width="70" height="15" uuid="cd227b90-f7d4-416a-8937-e2ca0854d0ba">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Right">
-						<paragraph rightIndent="4"/>
-					</textElement>
-					<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{totalSinImpuestos}==null?"0.00":$F{totalSinImpuestos}))]]></textFieldExpression>
-				</textField>
-				<textField isBlankWhenNull="true">
-					<reportElement style="etiqueta-celda" x="485" y="105" width="70" height="15" uuid="6199e40f-229a-4f5b-84ee-a969867d74b9">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Right">
-						<paragraph rightIndent="4"/>
-					</textElement>
-					<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{iva12}==null?"0.00":$F{iva12}))]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement style="etiqueta-celda" x="363" y="135" width="122" height="15" uuid="6016f1f7-ca3f-439e-bd48-24f1933e08a7">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement>
-						<font size="7" isBold="false"/>
-						<paragraph leftIndent="4"/>
-					</textElement>
-					<text><![CDATA[PROPINA]]></text>
-				</staticText>
-				<staticText>
-					<reportElement style="etiqueta-celda" x="363" y="120" width="122" height="15" uuid="b8c2ebcd-fe35-4c3e-8253-439c11be5000">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement>
-						<font size="7" isBold="false"/>
-						<paragraph leftIndent="4"/>
-					</textElement>
-					<text><![CDATA[IRBPNR]]></text>
-				</staticText>
-				<textField isBlankWhenNull="true">
-					<reportElement style="etiqueta-celda" x="485" y="0" width="70" height="15" uuid="d2742dde-3ce6-4957-b553-8c5f0c0bd6c4">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Right">
-						<paragraph rightIndent="4"/>
-					</textElement>
-					<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{subtotal12}==null?"0.00":$F{subtotal12}))]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement style="etiqueta-celda" x="363" y="60" width="122" height="15" uuid="46bdc50e-e265-4056-bd35-a1a0628109c4">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement>
-						<font size="7" isBold="false"/>
-						<paragraph leftIndent="4"/>
-					</textElement>
-					<text><![CDATA[SUBTOTAL SIN IMPUESTOS]]></text>
-				</staticText>
-				<textField isBlankWhenNull="true">
-					<reportElement style="etiqueta-celda" x="485" y="15" width="70" height="15" uuid="8db94b36-c07e-4e92-afc6-9876daac64e8">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Right">
-						<paragraph rightIndent="4"/>
-					</textElement>
-					<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{subtotal0}==null?"0.00":$F{subtotal0}))]]></textFieldExpression>
-				</textField>
-				<textField isBlankWhenNull="true">
-					<reportElement style="etiqueta-celda" x="485" y="135" width="70" height="15" uuid="9286d215-485f-40f9-a6fb-5c84248eec57">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Right">
-						<paragraph rightIndent="4"/>
-					</textElement>
-					<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{propina}==null?"0.00":$F{propina}))]]></textFieldExpression>
-				</textField>
-				<textField isBlankWhenNull="true">
-					<reportElement style="etiqueta-celda" x="485" y="45" width="70" height="15" uuid="2a60a0d9-a7fd-44c4-9ff0-9374435ae2f1">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Right">
-						<paragraph rightIndent="4"/>
-					</textElement>
-					<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{subtotalExcento}==null?"0.00":$F{subtotalExcento}))]]></textFieldExpression>
-				</textField>
-				<textField isBlankWhenNull="true">
-					<reportElement style="etiqueta-celda" x="485" y="120" width="70" height="15" uuid="43879dc4-c162-4659-8224-30043fd704e4">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Right">
-						<paragraph rightIndent="4"/>
-					</textElement>
-					<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{irbpnr}==null?"0.00":$F{irbpnr}))]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement style="etiqueta-celda" x="363" y="90" width="122" height="15" uuid="140b753d-4e69-47ff-b765-1d20fc3303fa">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement>
-						<font size="7" isBold="false"/>
-						<paragraph leftIndent="4"/>
-					</textElement>
-					<text><![CDATA[ICE]]></text>
-				</staticText>
-				<textField isBlankWhenNull="true">
-					<reportElement style="etiqueta-celda" x="485" y="150" width="70" height="15" uuid="0c06c1b0-f7db-4fb7-a197-a07609af3d02">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Right">
-						<paragraph rightIndent="4"/>
-					</textElement>
-					<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{importeTotal}==null?"0.00":$F{importeTotal}))]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement style="etiqueta-celda" x="363" y="150" width="122" height="15" uuid="36013e5f-c88e-45fb-b6dc-94041bcf1f0e">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement>
-						<font size="7" isBold="false"/>
-						<paragraph leftIndent="4"/>
-					</textElement>
-					<text><![CDATA[VALOR TOTAL]]></text>
-				</staticText>
-				<textField isBlankWhenNull="true">
-					<reportElement style="etiqueta-celda" x="485" y="90" width="70" height="15" uuid="1a1b2c78-5849-47f1-ae9f-233abd0ffce4">
-						<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
-						<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
-						<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-						<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
-					</reportElement>
-					<box>
-						<pen lineWidth="1.0" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Right">
-						<paragraph rightIndent="4"/>
-					</textElement>
-					<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{ice}==null?"0.00":$F{ice}))]]></textFieldExpression>
-				</textField>
+				<frame>
+					<reportElement x="363" y="0" width="192" height="254" uuid="530d5b19-65a0-49a7-8c73-578ff187a26d"/>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="225" width="122" height="15" uuid="6016f1f7-ca3f-439e-bd48-24f1933e08a7">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[PROPINA]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="165" width="70" height="15" isRemoveLineWhenBlank="true" uuid="6199e40f-229a-4f5b-84ee-a969867d74b9">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<printWhenExpression><![CDATA[(new java.math.BigDecimal($F{iva12})).doubleValue() > 0]]></printWhenExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{iva12}==null?"0.00":$F{iva12}))]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="210" width="70" height="15" uuid="43879dc4-c162-4659-8224-30043fd704e4">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{irbpnr}==null?"0.00":$F{irbpnr}))]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="75" width="70" height="15" uuid="8d979514-6a8e-4322-a2ab-464c578eb5ff">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{subtotalNoObjeto}==null?"0.00":$F{subtotalNoObjeto}))]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="75" width="122" height="15" uuid="c04ffdf7-69b5-44f9-9406-0ff0dcc35212">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[SUBTOTAL NO OBJETO DE IVA]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="60" width="70" height="15" uuid="8db94b36-c07e-4e92-afc6-9876daac64e8">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{subtotal0}==null?"0.00":$F{subtotal0}))]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="135" width="122" height="15" uuid="140b753d-4e69-47ff-b765-1d20fc3303fa">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[ICE]]></text>
+					</staticText>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="90" width="122" height="15" uuid="0536f443-213b-4fa1-974c-f25ffdbd6a24">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[SUBTOTAL EXCENTO DE IVA]]></text>
+					</staticText>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="240" width="122" height="15" uuid="36013e5f-c88e-45fb-b6dc-94041bcf1f0e">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[VALOR TOTAL]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="15" width="70" height="15" isRemoveLineWhenBlank="true" uuid="d2742dde-3ce6-4957-b553-8c5f0c0bd6c4">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<printWhenExpression><![CDATA[(new java.math.BigDecimal($F{subtotal12})).doubleValue() > 0]]></printWhenExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{subtotal12}==null?"0.00":$F{subtotal12}))]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="120" width="122" height="15" uuid="554fbd16-1c06-4c8f-8126-0c7c2f98b6d8">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[TOTAL DESCUENTO]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="90" width="70" height="15" uuid="2a60a0d9-a7fd-44c4-9ff0-9374435ae2f1">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{subtotalExcento}==null?"0.00":$F{subtotalExcento}))]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="120" width="70" height="15" uuid="29d390a5-9ef0-4eba-895c-89d8151ad754">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{totalDescuento}==null?"0.00":$F{totalDescuento}))]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="105" width="70" height="15" uuid="cd227b90-f7d4-416a-8937-e2ca0854d0ba">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{totalSinImpuestos}==null?"0.00":$F{totalSinImpuestos}))]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="210" width="122" height="15" uuid="b8c2ebcd-fe35-4c3e-8253-439c11be5000">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[IRBPNR]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="225" width="70" height="15" uuid="9286d215-485f-40f9-a6fb-5c84248eec57">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{propina}==null?"0.00":$F{propina}))]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="60" width="122" height="15" uuid="8dda3ea5-c8ce-4abf-be28-a56b8c153df8">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[SUBTOTAL 0%]]></text>
+					</staticText>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="15" width="122" height="15" isRemoveLineWhenBlank="true" uuid="17764608-3f67-4939-8008-52fd934b9801">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<printWhenExpression><![CDATA[(new java.math.BigDecimal($F{subtotal12})).doubleValue() > 0]]></printWhenExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[SUBTOTAL 12%]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="135" width="70" height="15" uuid="1a1b2c78-5849-47f1-ae9f-233abd0ffce4">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{ice}==null?"0.00":$F{ice}))]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="165" width="122" height="15" isRemoveLineWhenBlank="true" uuid="0d3ea698-9057-400f-8dd3-ef970e8a448a">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<printWhenExpression><![CDATA[(new java.math.BigDecimal($F{iva12})).doubleValue() > 0]]></printWhenExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[IVA 12%]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="240" width="70" height="15" uuid="0c06c1b0-f7db-4fb7-a197-a07609af3d02">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{importeTotal}==null?"0.00":$F{importeTotal}))]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="105" width="122" height="15" uuid="46bdc50e-e265-4056-bd35-a1a0628109c4">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[SUBTOTAL SIN IMPUESTOS]]></text>
+					</staticText>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="30" width="122" height="15" uuid="0e206e0b-ed57-458f-84b9-a3b9feb47ea5">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[SUBTOTAL 15%]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="30" width="70" height="15" uuid="11d31ff6-815e-4ef3-8e7e-18df40eff0cf">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{subtotal15}==null?"0.00":$F{subtotal15}))]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="180" width="70" height="15" uuid="f66affca-829e-443d-827b-1a90ded5aa10">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{iva15}==null?"0.00":$F{iva15}))]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="180" width="122" height="15" uuid="26cd487b-3958-4d9b-9ab4-2abcb2db85e3">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[IVA 15%]]></text>
+					</staticText>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="0" width="122" height="15" isRemoveLineWhenBlank="true" uuid="cb345c09-c6d7-4f87-a386-84491795cd0b">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<printWhenExpression><![CDATA[(new java.math.BigDecimal($F{subtotalEspecial})).doubleValue() > 0]]></printWhenExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[SUBTOTAL TARIFA ESPECIAL]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="0" width="70" height="15" isRemoveLineWhenBlank="true" uuid="b7d51f54-04b7-4f4a-b76d-0422805d2f03">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<printWhenExpression><![CDATA[(new java.math.BigDecimal($F{subtotalEspecial})).doubleValue() > 0]]></printWhenExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{subtotalEspecial}==null?"0.00":$F{subtotalEspecial}))]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="45" width="122" height="15" isRemoveLineWhenBlank="true" uuid="80862880-daf7-4411-9e4b-77b6b74af34c">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<printWhenExpression><![CDATA[(new java.math.BigDecimal($F{subtotal5})).doubleValue() > 0]]></printWhenExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[SUBTOTAL 5%]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="45" width="70" height="15" isRemoveLineWhenBlank="true" uuid="29f99cfe-9ffb-40b1-bd04-4af2d8ce41fa">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<printWhenExpression><![CDATA[(new java.math.BigDecimal($F{subtotal5})).doubleValue() > 0]]></printWhenExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{subtotal15}==null?"0.00":$F{subtotal15}))]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="150" width="122" height="15" isRemoveLineWhenBlank="true" uuid="55f4c081-96a9-4d7c-ab3f-6a02fc42d296">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<printWhenExpression><![CDATA[(new java.math.BigDecimal($F{ivaEspecial})).doubleValue() > 0]]></printWhenExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[IVA TARIFA ESPECIAL]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="150" width="70" height="15" isRemoveLineWhenBlank="true" uuid="e99f8c75-bd2e-4d28-80bb-ead87f66983c">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<printWhenExpression><![CDATA[(new java.math.BigDecimal($F{ivaEspecial})).doubleValue() > 0]]></printWhenExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{ivaEspecial}==null?"0.00":$F{ivaEspecial}))]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement style="etiqueta-celda" x="0" y="195" width="122" height="15" isRemoveLineWhenBlank="true" uuid="960cbd23-3336-4a40-880b-3979570f5f6e">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<printWhenExpression><![CDATA[(new java.math.BigDecimal($F{iva5})).doubleValue() > 0]]></printWhenExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement>
+							<font size="7" isBold="false"/>
+							<paragraph leftIndent="4"/>
+						</textElement>
+						<text><![CDATA[IVA 5%]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement style="etiqueta-celda" x="122" y="195" width="70" height="15" isRemoveLineWhenBlank="true" uuid="5a3dfe3a-86db-4603-baf6-cd70f6cba5e6">
+							<property name="net.sf.jasperreports.style.box.pen.lineStyle" value="Solid"/>
+							<property name="net.sf.jasperreports.style.box.pen.lineWidth" value="1"/>
+							<propertyExpression name="net.sf.jasperreports.style.box.bottom.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<propertyExpression name="net.sf.jasperreports.style.box.pen.lineColor"><![CDATA[$P{color}]]></propertyExpression>
+							<printWhenExpression><![CDATA[(new java.math.BigDecimal($F{iva5})).doubleValue() > 0]]></printWhenExpression>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Right">
+							<paragraph rightIndent="4"/>
+						</textElement>
+						<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",new java.math.BigDecimal($F{iva5}==null?"0.00":$F{iva5}))]]></textFieldExpression>
+					</textField>
+				</frame>
 			</frame>
 		</band>
 	</detail>
