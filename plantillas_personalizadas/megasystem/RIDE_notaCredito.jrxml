@@ -244,7 +244,7 @@
 					<font size="8"/>
 					<paragraph leftIndent="4"/>
 				</textElement>
-				<textFieldExpression><![CDATA["<b>Razón Social/Nombres y Apellidos: /b>" + $F{razonSocialComprador}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["<b>Razón Social/Nombres y Apellidos: </b>" + $F{razonSocialComprador}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement style="etiqueta-texto" positionType="Float" x="410" y="221" width="141" height="15" uuid="9a340b53-ce30-471a-bfba-48de57edd700">
@@ -260,7 +260,7 @@
 				<reportElement style="etiqueta-texto" positionType="Float" x="3" y="236" width="548" height="15" uuid="11d8734f-aa38-49bb-b5ca-f08ed0631654">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 				</reportElement>
-				<textElement>
+				<textElement markup="html">
 					<font size="8"/>
 					<paragraph leftIndent="4"/>
 				</textElement>
