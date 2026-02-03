@@ -120,6 +120,9 @@
 		<field name="impuestoReembolso" class="java.math.BigDecimal">
 			<fieldDescription><![CDATA[sum(detalleImpuestos/detalleImpuesto/impuestoReembolso)]]></fieldDescription>
 		</field>
+		<field name="base15" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[detalleImpuestos/detalleImpuesto[codigo='2' and codigoPorcentaje='4']/baseImponibleReembolso]]></fieldDescription>
+		</field>
 	</subDataset>
 	<parameter name="numeroAutorizacion" class="java.lang.String"/>
 	<parameter name="fechaAutorizacion" class="java.lang.String"/>
@@ -988,7 +991,7 @@
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[BASE 12%]]></text>
+				<text><![CDATA[BASE 15%]]></text>
 			</staticText>
 			<staticText>
 				<reportElement style="etiqueta-celda" positionType="Float" mode="Opaque" x="415" y="15" width="70" height="30" forecolor="#FFFFFF" backcolor="#4FB7CD" uuid="2c899992-4f31-4587-8baf-43b92f5924aa">
@@ -1158,7 +1161,7 @@
 							<textElement textAlignment="Right" markup="none">
 								<paragraph leftIndent="0" rightIndent="4"/>
 							</textElement>
-							<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",$F{base12}==null?new java.math.BigDecimal("0"):$F{base12})]]></textFieldExpression>
+							<textFieldExpression><![CDATA[java.lang.String.format("%,.2f",$F{base15}==null?new java.math.BigDecimal("0"):$F{base15})]]></textFieldExpression>
 						</textField>
 						<textField>
 							<reportElement style="etiqueta-celda" positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="415" y="0" width="70" height="15" uuid="446153f6-905b-4883-92e5-f213b25f1d04">
